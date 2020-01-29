@@ -37,27 +37,30 @@ class LoginForm extends React.Component {
 
   render() {
     return (
-      <div className='login-page'>
-        <form onSubmit={this.handleSubmit}>
+      <div className="login-page">
+        <form onSubmit={this.handleSubmit} className='login-form'>
           <h1>Sign In</h1>
-          <p>Sign in to start watching or restart your membership</p>
+          <p className="login-first-p">Sign in to start watching or restart your membership</p>
           {this.renderErrors()}
           <input type="text" value={this.state.username} onChange={this.update('username')} placeholder={'Username'}/>
           <br />
           <input type="password" value={this.state.password} onChange={this.update('password')} placeholder={'Password'} />
           <br />
-          <button>Sign In</button>
+          <button type="submit" className="sign-in-button">Sign In</button>
           <br />
-          <input type="checkbox"/>Remember me
+          <input type="checkbox" /><label>Remember me</label>
           <a href="#">Need help?</a>
           <br />
           <div>
-            <img src="https://cdn.pixabay.com/photo/2017/06/22/06/22/facebook-2429746_1280.png" alt="Facebook Logo" style={{width: 20}}/>
-            <span>Login With Facebook</span>
+            <a href="#" className="facebook-link">
+              <img src="https://cdn.pixabay.com/photo/2017/06/22/06/22/facebook-2429746_1280.png" alt="Facebook Logo" style={{width: 20}}/>
+              <span>Login with Facebook</span>
+            </a>
           </div>
-          <p><b>New to Litflix?</b></p>
-          <p>No ads. Watch anywhere. Cancel anytime.</p>
-          <button>Try 30 days free ></button>
+          <span className="divider-bar"></span>
+          <p className="form-text-1">New to Litflix?</p>
+          <p className="form-text-2">No ads. Watch anywhere. Cancel anytime.</p>
+          <button className="sign-up-button">Try 30 days free ></button>
         </form>
       </div>
     )
