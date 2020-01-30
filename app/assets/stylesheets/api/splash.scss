@@ -1,0 +1,402 @@
+body {
+  background-color: black;
+  min-width: 320px;
+  margin: 0;
+  display: block;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  overflow-x: hidden;
+  max-width: 1820px;
+  margin: 0 auto;
+}
+
+.container-1 {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 10%;
+  max-height: 657px;
+  top: 0;
+  left: 0;
+  background-size: 100%;
+  border-bottom: solid 8px #212121;
+  color: white;
+  font-family: sans-serif;
+}
+
+.container-2 {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: black;
+  height: 465px;
+  width: 100%;
+  border-bottom: solid 8px #212121;
+  color: white;
+  font-family: sans-serif;
+  justify-content: center;
+}
+
+.container-3 {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: black;
+  height: 461px;
+  width: 100%;
+  border-bottom: solid 8px #212121;
+}
+
+.container-1 > img {
+  z-index: -1;
+  float: left;
+  position: relative;
+  align-self: center;
+  bottom: 100px;
+}
+
+.splash-sign-in-div {
+  position: absolute;
+  top: 4%;
+  right: 1%
+}
+
+.splash-sign-in {
+  position: relative;
+  background-color: #E50814;
+  border: 1px solid #E50814;
+  border-radius: 2px;
+  color: white;
+  height: 34px;
+  width: 85px;
+  font-size: 16.5px;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.container-1-main {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+  top: 30%;
+  height: 370px;
+  max-width: 950px;
+  flex-wrap: wrap-reverse;
+}
+
+.container-1 h2 {
+  position: relative;
+  font-size: 50px;
+  font-weight: 600;
+  height: 100%;
+  height: 100px;
+  width: 600px;
+  text-align: center;
+}
+
+.container-1 h3 {
+  position: relative;
+  margin-top: 97px;
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+.signup-field {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.signup-field > input {
+  position: relative;
+  width: 450px;
+  height: 55px;
+  font-size: 16px;
+  padding-left: 8px;
+}
+
+.signup-field > button {
+  position: relative;
+  width: 330px;
+  height: 61.5px;
+  background-color: #E50814;
+  border: solid 1px #E50814;
+  color: white;
+  font-size: 25px;
+  position: relative;
+  top: 2.5px;
+}
+
+.container-1-main > p {
+  position: relative;
+  font-size: 19px;
+  font-weight: 300;
+}
+
+.container-2 {
+  display: flex;
+}
+
+.container-2-main {
+  position: absolute;
+  display: flex;
+  height: 325px;
+  width: 1100px;
+  align-self: center;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container-2-text > h2 {
+  font-size: 48px;
+  font-weight: 600;
+  position: relative;
+  display: flex;
+  align-self: center;
+  letter-spacing: 1px;
+}
+
+.container-2-text > h3 {
+  font-size: 25.5px;
+  position: relative;
+  width: 500px;
+  margin-top: 20px;
+  line-height: 35px;
+}
+
+.tv-story-card {
+  position: absolute;
+  height: 378px;
+  width: 520px;
+  left: 54%;
+  bottom: 1px;
+}
+
+.tv-story-card > img {
+  z-index: 2;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.video-story-card {
+  z-index: 0;
+}
+
+.video-story-card > video {
+  position: absolute; 
+  right: 14.2%; 
+  bottom: 24.5%;
+  min-width: 30%; 
+  min-height: 54%;
+  width: 72%; 
+  height: 10%; 
+  z-index: 1;
+  background-size: cover;
+  overflow: hidden;
+  object-fit: fill;
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5){
+
+  html,
+  body{
+    width:100%;
+    overflow-x:hidden;
+  }
+
+}
+
+.container-3 {
+  color: white;
+  display: flex;
+  font-family: sans-serif;
+}
+
+.container-3-main {
+  display: flex;
+  height: 397px;
+  margin: 30px;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 1100px;
+  align-self: center;
+}
+
+@media all and (max-width: 1000px) and (min-width: 700px) {
+  .phone-img {
+   margin:50px;
+  }
+}
+
+.phone-img {
+  z-index: 1;
+  position: absolute;
+  width: 500px;
+  height: 400px;
+  top: 30px;
+}
+
+.phone-img > img {
+  z-index: 1;
+  position: relative;
+  right: 60px;
+}
+
+.phone-cover {
+  z-index: 2;
+  position: absolute;
+  height: 96px;
+  width: 320px;
+  background: black;
+  border: 2px solid #494949;
+  border-radius: 10px;
+  display: flex;
+  top: 148px;
+  margin-left: 18px;
+}
+
+.cover-photo {
+  position: relative;
+  margin: 6px;
+  margin-left: 13px;
+}
+
+.cover-text {
+  margin-top: 38px;
+  margin-left: 10px;
+}
+
+.cover-text > h1 {
+ 
+}
+
+.cover-text > p {
+  color: #0a61cb;
+  font-size: 14px;
+  margin-top: 3px;
+}
+
+.cover-spinner {
+  position: relative;
+  height: 45px;
+  top: 27%;
+  left: 18%;
+}
+
+.container-3-text {
+  position: absolute;
+  width: 55%;
+  left: 43%;
+}
+
+.container-3-text > h2 {
+  position: relative;
+  z-index: 2;
+  font-size: 48px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  line-height: 53px;
+  width: 558px;
+  margin-left: 12%;
+}
+
+.container-3-text > h3 {
+  position: relative;
+  z-index: 2;
+  font-size: 25.5px;
+  line-height: 35px;
+  margin-top: 18px;
+  width: 588px;
+  margin-left: 12%
+}
+
+.container-4 {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 540px;
+  max-height: 540px;
+  top: 0;
+  left: 0;
+  border-bottom: solid 8px #212121;
+  color: white;
+  font-family: sans-serif;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-4-main {
+  width: 1100px;
+  height: 396px;
+  margin: 10px;
+  display: flex;
+}
+
+.container-4-text {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+  justify-content: center;
+}
+
+.container-4-text > h2 {
+  font-size: 48px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  line-height: 53px;
+  width: 500px;
+}
+
+.container-4-text > h3 {
+  font-size: 25.5px;
+  line-height: 35px;
+  width: 534px;
+  margin-top: 18px;
+}
+
+.container-4-card {
+  display: inline-block;
+}
+
+.container-4-card > img {
+  position: relative;
+  height: 411px;
+  bottom: 21px;
+  left: 51px;
+}
+
+.video-story-card2 {
+  position: absolute;
+  top: 100px;
+  z-index: -1;
+}
+
+.video-story-card2 > video {
+  position: absolute; 
+  right: 17.2%; 
+  bottom: 24.5%;
+  min-width: 30%; 
+  min-height: 54%;
+  width: 74%; 
+  height: 10%; 
+  background-size: cover;
+  overflow: hidden;
+  object-fit: fill;
+  height: 191px;
+  width: 334px;
+  left: 156px;
+  top: -3px;
+}
