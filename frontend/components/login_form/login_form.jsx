@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class LoginForm extends React.Component {
   constructor(props) {
@@ -14,7 +15,7 @@ class LoginForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
-    this.props.processForm(user);
+    this.props.login(user);
   };
 
   update(field) {
@@ -60,7 +61,7 @@ class LoginForm extends React.Component {
           <span className="divider-bar"></span>
           <p className="form-text-1">New to Litflix?</p>
           <p className="form-text-2">No ads. Watch anywhere. Cancel anytime.</p>
-          <button className="sign-up-button">Try 30 days free ></button>
+          <Link to={"/signup"} id="sign-up-button-login">Try 30 days free ></Link>
         </form>
       </div>
     )

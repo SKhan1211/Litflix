@@ -2,10 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-html, body {
-  height: 100%;
-}
-
 .login-page { 
   z-index: -1;
   background: image_url('logo-developmentversion.png') no-repeat center center fixed;
@@ -132,7 +128,7 @@ html, body {
   margin: 2px 0px 0px 62px;
 }
 
-.sign-up-button {
+#sign-up-button-login {
   display: block;
   position: relative;
   background-color: white;
@@ -143,11 +139,11 @@ html, body {
   padding: 12px 25px 12px 25px;
   font-size: 18px;
   font-weight: 600;
-  width: 74%;
+  width: 62%;
   text-align: center;
   margin-top: 20px;
 }
 
-.sign-up-button:hover {
+#sign-up-button:hover {
   cursor: pointer;
 }

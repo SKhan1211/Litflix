@@ -70,13 +70,15 @@ body {
   position: relative;
   background-color: #E50814;
   border: 1px solid #E50814;
-  border-radius: 2px;
+  border-radius: 5px;
   color: white;
   height: 34px;
   width: 85px;
   font-size: 16.5px;
   font-weight: 300;
   cursor: pointer;
+  text-decoration: none;
+  padding: 5px 15px 5px 15px;
 }
 
 .container-1-main {
@@ -121,7 +123,7 @@ body {
   padding-left: 8px;
 }
 
-.signup-field > button {
+.signup-link {
   position: relative;
   width: 330px;
   height: 61.5px;
@@ -131,6 +133,8 @@ body {
   font-size: 25px;
   position: relative;
   top: 2.5px;
+  text-decoration: none;
+  padding: 15px 55px 15px 55px;
 }
 
 .container-1-main > p {
@@ -399,4 +403,106 @@ only screen and (min-device-pixel-ratio: 1.5){
   width: 334px;
   left: 156px;
   top: -3px;
+}
+
+.container-5 {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 858px;
+  max-height: 858px;
+  top: 0;
+  left: 0;
+  border-bottom: solid 8px #212121;
+  color: white;
+  font-family: sans-serif;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-5-main {
+  height: 84%;
+  width: 94%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container-5-main > h2 {
+  font-size: 48px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-top: 5px;
+}
+
+.ul-li-list {
+  margin-top: 45px;
+  width: 100%;
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+}
+
+.ul-li-list button {
+  height: 75px;
+  width: 61%;
+  color: white;
+  background-color: #303030;
+  border: 1px solid #303030;
+  text-align: left;
+  font-size: 25px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ul-li-list li {
+  display: flex;
+  margin: 5px;
+  justify-content: center;
+}
+
+.ul-li-list p {
+  margin-left: 20px;
+}
+
+.ul-li-list span {
+  font-size: 50px;
+  font-weight: 200;
+  margin-right: 20px;
+}
+
+.signup-field2 {
+  margin-top: 43px;
+}
+
+.signup-field2 > input {
+  position: relative;
+  width: 450px;
+  height: 55px;
+  font-size: 16px;
+  padding-left: 8px;
+}
+
+.signup-link2 {
+  position: relative;
+  width: 330px;
+  height: 61.5px;
+  background-color: #E50814;
+  border: solid 1px #E50814;
+  color: white;
+  font-size: 25px;
+  position: relative;
+  top: 2.5px;
+  margin-top: 40px;
+  text-decoration: none;
+  padding: 15px 55px 15px 55px;
+}
+
+.container-5-main > p {
+  position: relative;
+  font-size: 19px;
+  font-weight: 300;
+  margin-top: 20px;
 }

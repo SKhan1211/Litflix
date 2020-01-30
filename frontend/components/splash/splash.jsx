@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class Splash extends React.Component {
   render() {
@@ -7,14 +8,14 @@ class Splash extends React.Component {
         <section className="container-1">
           <img src={window.background} height="977" width="1450"/>
           <div className="splash-sign-in-div"> 
-            <button className="splash-sign-in" onClick={null}>Sign In</button>
+            <Link to="/login" className="splash-sign-in">Sign In</Link>
           </div>
           <div className="container-1-main">
             <h2>Unlimited movies, TV shows, and more.</h2>
             <h3>Watch anywhere. Cancel anytime.</h3>
             <div className="signup-field">
-              <input type="text" placeholder={"Username"}/>
-              <button onClick={null}>TRY DEMO FREE</button>
+              <input type="text" placeholder={"Username"} />
+              <Link to={"/signup"} className="signup-link">TRY DEMO FREE ></Link>
             </div>
             <p>Ready to watch? Enter a username to create or access your account</p>
           </div>
@@ -74,8 +75,27 @@ class Splash extends React.Component {
             </div>
           </div>
         </section>
-        <section className="container-5"></section>
-        <section className="container-6"></section>
+        <section className="container-5">
+          <div className="container-5-main">
+            <h2>Frequently Asked Questions</h2>
+            <ul className="ul-li-list">
+              <li><button><p>What is Litflix?</p><span>+</span></button></li>
+              <li><button><p>How much does Litflix cost?</p><span>+</span></button></li>
+              <li><button><p>Where can I watch?</p><span>+</span></button></li>
+              <li><button><p>How do I cancel?</p><span>+</span></button></li>
+              <li><button><p>What can I watch on Litflix?</p><span>+</span></button></li>
+              <li><button><p>How does the free trial work?</p><span>+</span></button></li>
+            </ul>
+            <div className="signup-field2">
+              <input type="text" placeholder={"Username"} />
+              <Link to={"/signup"} className="signup-link2">TRY DEMO FREE ></Link>
+            </div>
+            <p>Ready to watch? Enter a username to create or access your account</p>
+          </div>
+        </section>
+        <section className="container-6">
+          {/* for footer number add binary numbers 0-101-010-1010 */}
+        </section>
       </div>
     )
   };

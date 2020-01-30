@@ -3,12 +3,16 @@ import { Route, Redirect, Switch, HashRouter } from 'react-router-dom';
 
 import LoginFormContainer from './login_form/login_form_container';
 import Splash from './splash/splash';
+import SignupFormContainer from './signup_form/signup_form_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 const App = () => (
   <div>
-    <Route exact path="/" component={Splash}/>
-    <AuthRoute exact path="/login" component={LoginFormContainer} />
+    <Switch>
+      <AuthRoute exact path="/login" component={LoginFormContainer} />
+      <AuthRoute exact path="/signup" component={SignupFormContainer} />
+      <Route path="/" component={Splash}/>
+    </Switch>
   </div>
 );
 
