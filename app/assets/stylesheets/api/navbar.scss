@@ -1,0 +1,129 @@
+.navbar-component {
+  position: fixed;
+  font-size: 14px;
+  font-family: sans-serif;
+  font-weight: 200;
+  transform: scale(1, 0.95);
+  width: 100%;
+}
+
+.navbar-box {
+  top: 0;
+  width: 99.9%;
+  height: 68px;
+  background-image: linear-gradient(180deg, rgb(0, 0, 0) -62%, #0e0e0e  81%);
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar-left {
+  height: 100%;
+  width: 320px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 10.3%;
+  margin-right: 150px;
+}
+
+.navbar-left-link {
+  text-decoration: none;
+  color: rgb(206, 206, 206);
+  position: relative;
+  top: 1px;
+}
+
+.navbar-left-link:hover {
+  color: rgb(160, 160, 160)
+}
+
+.navbar-right {
+  position: relative;
+  height: 100%;
+  width: 230px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  right: 100px;
+  top: 2px;
+}
+
+.navbar-right > img {
+  cursor: pointer;
+}
+
+.profile-pic-container {
+  height: 35px;
+  width: 35px;
+  background-color: rgb(133, 167, 252);
+  display: flex;
+  cursor: pointer;
+}
+
+.profile-pic-container {
+  align-items: center;
+}
+
+.profile-pic-container > img {
+  position: relative;
+  width: 110%;
+  height: 110%;
+  right: 2px;
+}
+
+.profile-pic-container > p {
+  position: relative;
+  top: 4px;
+  left: 7px;
+  font-size: 11px;
+  transform: scale(1, 0.5);
+}
+
+.navbar-right-link {
+  text-decoration: none;
+  color: #cecece;
+}
+
+.trial-margin {
+  margin: auto
+}
+
+@media only screen and (max-width: 700px) {
+  .navbar-left {
+    margin-left: 21px;
+  }
+}
+
+.profile-dropdown {
+  position: absolute;
+  top: 68px;
+  right: -21px;
+  border: 1px solid rgb(50, 50, 50);
+  display: flex;
+  flex-direction: column;
+  width: 158px;
+  background-color: black;
+}
+
+.dropdown-section-1 {
+  margin: 15px 0px 15px 0px;
+}
+
+.dropdown-section-2 {
+  border-top: 1px solid rgb(79, 79, 79);
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-dropdown-link {
+  font-size: 13px;
+  color: white;
+  text-decoration: none;
+  margin: 7px 0px 0px 10px;
+}
+
+.profile-dropdown-link:hover {
+  text-decoration: underline;
+}

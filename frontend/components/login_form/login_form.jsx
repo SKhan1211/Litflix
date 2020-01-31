@@ -42,7 +42,7 @@ class LoginForm extends React.Component {
         <form onSubmit={this.handleSubmit} className='login-form'>
           <h1>Sign In</h1>
           <p className="login-first-p">Sign in to start watching or restart your membership</p>
-          {this.renderErrors()}
+          <p className="login-form-errors">{this.renderErrors()}</p>
           <input type="text" value={this.state.username} onChange={this.update('username')} placeholder={'Username'}/>
           <br />
           <input type="password" value={this.state.password} onChange={this.update('password')} placeholder={'Password'} />
@@ -61,7 +61,7 @@ class LoginForm extends React.Component {
           <span className="divider-bar"></span>
           <p className="form-text-1">New to Litflix?</p>
           <p className="form-text-2">No ads. Watch anywhere. Cancel anytime.</p>
-          <Link to={"/signup"} id="sign-up-button-login">Try 30 days free ></Link>
+          <Link to={"/signup"} id="sign-up-button-login" onClick={this.props.clearErrors}>Try 30 days free ></Link>
         </form>
       </div>
     )

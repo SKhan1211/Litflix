@@ -38,13 +38,13 @@ class SignupForm extends React.Component {
   render() {
     return (
       <div className="signup-page">
-        <div className="signup-top-bar"><a href="/#/login">Sign In</a></div>
+        <div className="signup-top-bar"><a href="/#/login" onClick={this.props.clearErrors}>Sign In</a></div>
         <div className="signup-border-bar">
           <form onSubmit={this.handleSubmit} className='signup-form'>
             <h1>Finish signup to start your free demo.</h1>
             <p className="signup-first-p">Just two more steps and you're done! We hate paperwork, too.</p>
             <h2>Create your account.</h2>
-            {this.renderErrors()}
+            <p className="signup-form-errors">{this.renderErrors()}</p>
             <input type="text" value={this.state.username} onChange={this.update('username')} placeholder={'Username'} />
             <br />
             <input type="password" value={this.state.password} onChange={this.update('password')} placeholder={'Password'} />
