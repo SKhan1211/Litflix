@@ -22,14 +22,15 @@ class NavBar extends React.Component {
             <div className="profile-pic-container">
               <img src={window.profilePic} height="360" width="490" />
               <p>▼</p>
+              <figure className="up-arrow">▲</figure>
               <div className="profile-dropdown">
                 <section className="dropdown-section-1">
                   <Link to="#" className="profile-dropdown-link">Manage Profiles</Link>
                 </section>
                 <section className="dropdown-section-2">
-                  <Link to="#" className="profile-dropdown-link" style={{ fontWeight: 'bold' }}>Account</Link>
-                  <Link to="#" className="profile-dropdown-link" style={{ fontWeight: 'bold' }}>Help Center</Link>
-                  <Link to="/" onClick={this.props.logout} className="profile-dropdown-link" style={{ fontWeight: 'bold' }}>Sign out of Litflix</Link>
+                  <Link to="#" className="profile-dropdown-link2" style={{ fontWeight: 'bold' }}>Account</Link>
+                  <Link to="#" className="profile-dropdown-link2" style={{ fontWeight: 'bold' }}>Help Center</Link>
+                  <Link to="/" onClick={this.props.logout} className="profile-dropdown-link2" style={{ fontWeight: 'bold' }}>Sign out of Litflix</Link>
                 </section>
               </div>
             </div>
