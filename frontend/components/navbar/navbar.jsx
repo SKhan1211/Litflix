@@ -2,6 +2,59 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 class NavBar extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { 
+      isOpen: false,
+      mouseOverMenu: false
+    };
+
+    this.handleOpen = this.handleOpen.bind(this);
+    this.handleClose = this.handleClose.bind(this);
+    this.handleFastClose = this.handleFastClose.bind(this);
+    this.displayNotification = this.displayNotification.bind(this);
+    this.undisplayNotification = this.undisplayNotification.bind(this);
+  };
+
+  handleOpen() {
+    setTimeout(() => {
+      this.setState({ isOpen: true })
+    }, 10)
+  };
+
+  handleClose() {
+    setTimeout(() => {
+      this.setState({ isOpen: false })
+    }, 300);
+  };
+
+  handleFastClose() {
+    this.setState({ isOpen: false, mouseOverMenu: false })
+  }
+
+  displayNotification() {
+    this.setState({ mouseOverMenu: true })
+  };
+
+  undisplayNotification() {
+    setTimeout(() => {
+      this.setState({ mouseOverMenu: false })
+    }, 300);
+  }
+
+  renderNotificationDropdown() {
+    if (this.state.isOpen || this.state.mouseOverMenu) {
+      return (
+        <div className="notif-dropdown-outer" onMouseEnter={this.displayNotification} onMouseLeave={this.undisplayNotification}>
+          <div className="notif-up-arrow">▲</div>
+          <div className="notification-dropdown">
+            <ul>Content to be added...</ul>
+          </div>
+        </div>
+      )
+    }
+  }
+
   render() {
     return (
       <div className="navbar-component">
@@ -18,9 +71,10 @@ class NavBar extends React.Component {
           <div className="navbar-right">
             <img src={window.searchIcon} height="20" width="20" />
             <Link className="navbar-right-link" to={"/browse"}>DVD</Link>
-            <img src={window.whiteBellIcon} height="35" width="35" />
+            <img src={window.whiteBellIcon} height="35" width="35" onMouseEnter={this.handleOpen} onMouseLeave={this.handleClose}/>
+            {this.renderNotificationDropdown()}
             <div className="profile-pic-container">
-              <img src={window.profilePic} height="360" width="490" />
+              <img src={window.profilePic} height="360" width="490" onMouseEnter={this.handleFastClose}/>
               <p>▼</p>
               <figure className="up-arrow">▲</figure>
               <div className="profile-dropdown">

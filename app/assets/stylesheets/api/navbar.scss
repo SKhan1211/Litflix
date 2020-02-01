@@ -169,8 +169,35 @@
   display: block;
 }
 
+.notif-dropdown-outer {
+  position: absolute;
+  left: -110%;
+  top: 84%;
+  height: 667px;
+  width: 408px;
+  height: 719px;
+  display: none;
+}
+
+.notif-dropdown-outer {
+  display: block;
+}
+
 .notification-dropdown {
-  height: 100px;
-  width: 100px;
-  border: 1px solid white;
+  position: absolute;
+  overflow-y: scroll;
+  height: 700px;
+  width: 407px;
+  border-top: 2px solid white;
+  border-bottom: 1px solid rgb(50, 50, 50);
+  border-left: 1px solid rgb(50, 50, 50);
+}
+
+div.notif-up-arrow {
+  position: relative;
+  color: rgb(227, 225, 225);
+  font-size: 17px;
+  transform: scale(1, 0.7);
+  left: 95%;
+  top: 0.7%;
 }
