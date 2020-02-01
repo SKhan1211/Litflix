@@ -185,12 +185,12 @@
 
 .notification-dropdown {
   position: absolute;
-  overflow-y: scroll;
-  height: 700px;
-  width: 407px;
+  height: 65%;
+  width: 100%;
   border-top: 2px solid white;
   border-bottom: 1px solid rgb(50, 50, 50);
   border-left: 1px solid rgb(50, 50, 50);
+  overflow-y: scroll;
 }
 
 div.notif-up-arrow {
