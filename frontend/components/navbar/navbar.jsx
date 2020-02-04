@@ -62,7 +62,6 @@ class NavBar extends React.Component {
           <div></div>
           <div className="navbar-left">
             <Link to={"/browse"} className="navbar-left-link">Home</Link>
-            <Link to={"/browse"} className="navbar-left-link">TV Shows</Link>
             <Link to={"/browse"} className="navbar-left-link">Movies</Link>
             <Link to={"/browse"} className="navbar-left-link">Latest</Link>
             <Link to={"/browse"} className="navbar-left-link">My List</Link>

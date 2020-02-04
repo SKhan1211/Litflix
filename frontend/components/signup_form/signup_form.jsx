@@ -4,10 +4,10 @@ class SignupForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      username: '',
+      username: this.props.requestedUser,
       password: ''
     };
-
+    
     this.handleSubmit = this.handleSubmit.bind(this);
   };
 
@@ -44,7 +44,7 @@ class SignupForm extends React.Component {
             <h1>Finish signup to start your free demo.</h1>
             <p className="signup-first-p">Just two more steps and you're done! We hate paperwork, too.</p>
             <h2>Create your account.</h2>
-            <p className="signup-form-errors">{this.renderErrors()}</p>
+            <span className="signup-form-errors">{this.renderErrors()}</span>
             <input type="text" value={this.state.username} onChange={this.update('username')} placeholder={'Username'} />
             <br />
             <input type="password" value={this.state.password} onChange={this.update('password')} placeholder={'Password'} />

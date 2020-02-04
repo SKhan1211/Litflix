@@ -2,6 +2,21 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 class Splash extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = this.props.requestedUser;
+
+    this.handleClick = this.handleClick.bind(this);
+  };
+
+  update(field) {
+    return e => this.setState({ [field]: e.currentTarget.value });
+  };
+
+  handleClick(e) {
+    this.props.receiveRequestedUser(this.state.requestedUser);
+  }
+
   render() {
     return (
       <div className="main-container">
@@ -14,8 +29,8 @@ class Splash extends React.Component {
             <h2>Unlimited movies, TV shows, and more.</h2>
             <h3>Watch anywhere. Cancel anytime.</h3>
             <div className="signup-field">
-              <input type="text" placeholder={"Username"} />
-              <Link to={"/signup"} className="signup-link">TRY DEMO FREE ></Link>
+              <input type="text" placeholder={"Username" || this.state.requestedUser} onChange={this.update('requestedUser')}/>
+              <Link to={"/signup"} className="signup-link" onClick={this.handleClick}>TRY DEMO FREE ></Link>
             </div>
             <p>Ready to watch? Enter a username to create or access your account</p>
           </div>

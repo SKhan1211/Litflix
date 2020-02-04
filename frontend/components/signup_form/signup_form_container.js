@@ -4,10 +4,11 @@ import { Link } from 'react-router-dom';
 import { signup, clearSessionErrors } from '../../actions/session_actions';
 import SignupForm from './signup_form';
 
-const mapStateToProps = ({ errors }) => {
+const mapStateToProps = ({ errors, session }) => {
   return {
     errors: errors.session,
-    navLink: <Link to="/login">Sign In</Link>
+    navLink: <Link to="/login">Sign In</Link>,
+    requestedUser: session.requestedUser
   };
 };
 
