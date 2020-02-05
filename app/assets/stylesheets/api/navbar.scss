@@ -108,6 +108,7 @@
   background-color: black;
   display: none;
   cursor: default;
+  opacity: 0.9;
 }
 
 .dropdown-section-1 {
@@ -194,6 +195,8 @@
   border-left: 1px solid rgb(50, 50, 50);
   border-right: 1px solid rgb(50, 50, 50);
   overflow-y: scroll;
+  background-color: black;
+  opacity: 0.8;
 }
 
 div.notif-up-arrow {
