@@ -1,0 +1,66 @@
+.structure-container {
+  margin-top: 65px;
+  background-color: #101010;
+
+  outline: 1px solid white;
+}
+
+.content-container {
+  margin: 0% 4% 0% 4%;
+
+  outline: 1px solid red;
+}
+
+.content-row-container {
+  padding-top: 3%;
+
+  outline: 1px solid green;
+}
+
+.content-row-container > h1 {
+  color: white;
+  font-family: sans-serif;
+  font-size: 1.5vw;
+  margin-bottom: 1%;
+}
+
+.video-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.video-link-1 {
+  margin-right: 5px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.video-link-2 {
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.video-link-3 {
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.video-link-4 {
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.video-link-5 {
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.video-link-6 {
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.video-container img {
+  width: 100%;
+  height: auto;
+}

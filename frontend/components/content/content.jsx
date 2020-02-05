@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class Content extends React.Component {
   constructor(props) {
@@ -20,8 +21,26 @@ class Content extends React.Component {
     // this.fetchMovies();
   }
 
+  //I can do a case statement to populate different arrays with my 6 videos, possibly passing those in as mSTP
+
   render() {
-    return <h1>Movie</h1> //Give padding-top 68px to top level div to get it below navbar component
+    return (
+      <div className="structure-container">
+        <div className="content-container">
+          <div className="content-row-container">
+            <h1>New Movies</h1>
+            <div className="video-container">
+              <Link to="#" className="video-link-1"><img src="https://assets.justinmind.com/wp-content/uploads/2018/11/Lorem-Ipsum-alternatives.png" alt="Lorem Ipsum" /></Link>
+              <Link to="#" className="video-link-2"><img src="https://assets.justinmind.com/wp-content/uploads/2018/11/Lorem-Ipsum-alternatives.png" alt="Lorem Ipsum" /></Link>
+              <Link to="#" className="video-link-3"><img src="https://assets.justinmind.com/wp-content/uploads/2018/11/Lorem-Ipsum-alternatives.png" alt="Lorem Ipsum" /></Link>
+              <Link to="#" className="video-link-4"><img src="https://assets.justinmind.com/wp-content/uploads/2018/11/Lorem-Ipsum-alternatives.png" alt="Lorem Ipsum" /></Link>
+              <Link to="#" className="video-link-5"><img src="https://assets.justinmind.com/wp-content/uploads/2018/11/Lorem-Ipsum-alternatives.png" alt="Lorem Ipsum" /></Link>
+              <Link to="#" className="video-link-6"><img src="https://assets.justinmind.com/wp-content/uploads/2018/11/Lorem-Ipsum-alternatives.png" alt="Lorem Ipsum" /></Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    )
   }
 }
 
