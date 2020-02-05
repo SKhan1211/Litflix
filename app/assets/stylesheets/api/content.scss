@@ -1,20 +1,19 @@
-.structure-container {
-  margin-top: 65px;
+html {
   background-color: #101010;
+}
 
-  outline: 1px solid white;
+.structure-container {
+  margin-top: 63px;
+  background-color: #101010;
 }
 
 .content-container {
   margin: 0% 4% 0% 4%;
-
-  outline: 1px solid red;
+  padding-bottom: 5%;
 }
 
 .content-row-container {
   padding-top: 3%;
-
-  outline: 1px solid green;
 }
 
 .content-row-container > h1 {
@@ -29,38 +28,87 @@
   justify-content: space-evenly;
 }
 
-.video-link-1 {
+.img-link-1 {
   margin-right: 5px;
   margin-left: 5px;
   cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.video-link-2 {
+.img-link-2 {
   margin-right: 5px;
   cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.video-link-3 {
+.img-link-3 {
   margin-right: 5px;
   cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.video-link-4 {
+.img-link-4 {
   margin-right: 5px;
   cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.video-link-5 {
+.img-link-5 {
   margin-right: 5px;
   cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.video-link-6 {
+.img-link-6 {
   margin-right: 5px;
   cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .video-container img {
   width: 100%;
   height: auto;
+}
+
+.mini-video-player {
+  display: block;
+  position: absolute;
+  width: 140%;
+  min-width: 170px;
+  z-index: 1;
+  flex-shrink: 0;
+}
+
+.mini-video-player-blank {
+  display: none
+}
+
+.vsc-controller {
+  display: none;
+}
+
+#first-vid {
+  left: -14%;
+}
+
+#last-vid {
+  right: -14%;
 }

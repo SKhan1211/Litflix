@@ -1,10 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ContentVideos from './content_videos';
 
 class Content extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { movies: [] };
+    this.state = { 
+      movies: []
+    };
+
     this.fetchMovies = this.fetchMovies.bind(this);
   }
 
@@ -18,7 +22,7 @@ class Content extends React.Component {
   };
 
   componentDidMount() {
-    // this.fetchMovies();
+    // this.fetchMovies(); Make this fetchMovie and grab movie by id
   }
 
   //I can do a case statement to populate different arrays with my 6 videos, possibly passing those in as mSTP
@@ -27,17 +31,12 @@ class Content extends React.Component {
     return (
       <div className="structure-container">
         <div className="content-container">
-          <div className="content-row-container">
-            <h1>New Movies</h1>
-            <div className="video-container">
-              <Link to="#" className="video-link-1"><img src="https://assets.justinmind.com/wp-content/uploads/2018/11/Lorem-Ipsum-alternatives.png" alt="Lorem Ipsum" /></Link>
-              <Link to="#" className="video-link-2"><img src="https://assets.justinmind.com/wp-content/uploads/2018/11/Lorem-Ipsum-alternatives.png" alt="Lorem Ipsum" /></Link>
-              <Link to="#" className="video-link-3"><img src="https://assets.justinmind.com/wp-content/uploads/2018/11/Lorem-Ipsum-alternatives.png" alt="Lorem Ipsum" /></Link>
-              <Link to="#" className="video-link-4"><img src="https://assets.justinmind.com/wp-content/uploads/2018/11/Lorem-Ipsum-alternatives.png" alt="Lorem Ipsum" /></Link>
-              <Link to="#" className="video-link-5"><img src="https://assets.justinmind.com/wp-content/uploads/2018/11/Lorem-Ipsum-alternatives.png" alt="Lorem Ipsum" /></Link>
-              <Link to="#" className="video-link-6"><img src="https://assets.justinmind.com/wp-content/uploads/2018/11/Lorem-Ipsum-alternatives.png" alt="Lorem Ipsum" /></Link>
-            </div>
-          </div>
+          <ContentVideos />
+          <ContentVideos />
+          <ContentVideos />
+          <ContentVideos />
+          <ContentVideos />
+          <ContentVideos />
         </div>
       </div>
     )
