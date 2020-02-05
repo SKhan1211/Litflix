@@ -382,12 +382,13 @@ only screen and (min-device-pixel-ratio: 1.5){
   height: 411px;
   bottom: 21px;
   left: 51px;
+  z-index: 1
 }
 
 .video-story-card2 {
   position: absolute;
   top: 100px;
-  z-index: -1;
+  z-index: 0;
 }
 
 .video-story-card2 > video {
