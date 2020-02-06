@@ -18,13 +18,24 @@
   justify-content: space-between;
 }
 
+.navbar-box > img {
+  width: 9%;
+  height: 120%;
+  margin-top: 0.1%;
+  margin-left: 3%;
+}
+
+#first-link-navbar {
+  margin-left: 3%;
+}
+
 .navbar-left {
   height: 100%;
   width: 320px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-left: 10.3%;
+  margin-left: 2.3%;
   margin-right: 150px;
 }
 

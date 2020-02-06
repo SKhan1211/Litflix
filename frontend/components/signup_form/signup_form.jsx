@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class SignupForm extends React.Component {
   constructor(props) {
@@ -38,7 +39,10 @@ class SignupForm extends React.Component {
   render() {
     return (
       <div className="signup-page">
-        <div className="signup-top-bar"><a href="/#/login" onClick={this.props.clearErrors}>Sign In</a></div>
+        <div className="signup-top-bar">
+          <Link to="/" id="first-link-signup"><img className="bendy-logo-2" src={window.bendyLogo} width="120" height="74" /></Link>
+          <a href="/#/login" onClick={this.props.clearErrors}>Sign In</a>
+        </div>
         <div className="signup-border-bar">
           <form onSubmit={this.handleSubmit} className='signup-form'>
             <h1>Finish signup to start your free demo.</h1>

@@ -12,7 +12,14 @@
   height: 91px;
   border: 1px solid #E6E6E6;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+}
+
+.bendy-logo-2 {
+  align-self: center;
+  height: 130%;
+  width: 15%;
+  margin-left: 2%;
 }
 
 .signup-top-bar > a {
@@ -21,6 +28,13 @@
   margin: 37px;
   font-size: 19px;
   font-weight: 600;
+}
+
+#first-link-signup {
+  margin: 0;
+  align-self: center;
+  height: 90%;
+  width: 75%;
   align-self: flex-end;
 }
 

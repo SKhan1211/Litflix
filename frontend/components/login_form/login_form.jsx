@@ -39,6 +39,7 @@ class LoginForm extends React.Component {
   render() {
     return (
       <div className="login-page">
+        <Link to="/"><img className="bendy-logo" src={window.bendyLogo} /></Link>
         <form onSubmit={this.handleSubmit} className='login-form'>
           <h1>Sign In</h1>
           <p className="login-first-p">Sign in to start watching or restart your membership</p>
@@ -50,10 +51,10 @@ class LoginForm extends React.Component {
           <button type="submit" className="sign-in-button">Sign In</button>
           <br />
           <input type="checkbox" /><label>Remember me</label>
-          <a href="#">Need help?</a>
+          <a href="#/login">Need help?</a>
           <br />
           <div>
-            <a href="#" className="facebook-link">
+            <a href="#/login" className="facebook-link">
               <img src="https://cdn.pixabay.com/photo/2017/06/22/06/22/facebook-2429746_1280.png" alt="Facebook Logo" style={{width: 20}}/>
               <span>Login with Facebook</span>
             </a>

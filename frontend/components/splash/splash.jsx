@@ -20,6 +20,7 @@ class Splash extends React.Component {
   render() {
     return (
       <div className="main-container">
+          <img src={window.bendyLogo} id="first-logo-splash" />
         <section className="container-1">
           <img src={window.background} height="977" width="1450"/>
           <div className="splash-sign-in-div"> 
@@ -102,8 +103,8 @@ class Splash extends React.Component {
               <li><button><p>How does the free trial work?</p><span>+</span></button></li>
             </ul>
             <div className="signup-field2">
-              <input type="text" placeholder={"Username"} />
-              <Link to={"/signup"} className="signup-link2">TRY DEMO FREE ></Link>
+              <input type="text" placeholder={"Username" || this.state.requestedUser} onChange={this.update('requestedUser')}/>
+              <Link to={"/signup"} className="signup-link2" onClick={this.handleClick}>TRY DEMO FREE ></Link>
             </div>
             <p>Ready to watch? Enter a username to create or access your account</p>
           </div>
