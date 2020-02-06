@@ -37,9 +37,11 @@ body {
   height: 465px;
   width: 100%;
   border-bottom: solid 8px #212121;
+  border-top: solid 8px #212121;
   color: white;
   font-family: sans-serif;
   justify-content: center;
+  z-index: 1;
 }
 
 .container-3 {
@@ -53,7 +55,7 @@ body {
 }
 
 .container-1 > img {
-  z-index: -1;
+  z-index: 0;
   float: left;
   position: relative;
   align-self: center;
@@ -339,6 +341,7 @@ only screen and (min-device-pixel-ratio: 1.5){
   font-family: sans-serif;
   justify-content: center;
   align-items: center;
+  z-index: 1;
 }
 
 .container-4-main {
@@ -505,4 +508,13 @@ only screen and (min-device-pixel-ratio: 1.5){
   font-size: 19px;
   font-weight: 300;
   margin-top: 20px;
+}
+
+#first-logo-splash {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  height: 15%;
+  width: 12%;
+  left: 3%;
 }

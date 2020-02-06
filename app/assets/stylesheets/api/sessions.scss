@@ -18,6 +18,14 @@
   align-items: center;
 }
 
+.bendy-logo {
+  position: absolute;
+  top: 0;
+  left: 2%; 
+  width: 195px;
+  height: 130px;
+}
+
 .login-form {
   z-index: 1;
   background-color: rgba(12, 11, 11, 0.8);
@@ -26,7 +34,7 @@
   color: white;
   font-family: sans-serif;
   border-radius: 5px;
-  margin-bottom: 7%;
+  padding-bottom: 2%;
 }
 
 .login-form > h1 {

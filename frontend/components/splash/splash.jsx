@@ -20,6 +20,7 @@ class Splash extends React.Component {
   render() {
     return (
       <div className="main-container">
+          <img src={window.bendyLogo} id="first-logo-splash" />
         <section className="container-1">
           <img src={window.background} height="977" width="1450"/>
           <div className="splash-sign-in-div"> 

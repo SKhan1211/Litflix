@@ -60,6 +60,7 @@ class NavBar extends React.Component {
       <div className="navbar-component">
         <div className="navbar-box">
           <div></div>
+          <Link to="/browse" id="first-link-navbar"><img src={window.bendyLogo} width="120" height="74" /></Link>
           <div className="navbar-left">
             <Link to={"/browse"} className="navbar-left-link">Home</Link>
             <Link to={"/browse"} className="navbar-left-link">Movies</Link>

@@ -39,6 +39,7 @@ class LoginForm extends React.Component {
   render() {
     return (
       <div className="login-page">
+        <Link to="/"><img className="bendy-logo" src={window.bendyLogo} /></Link>
         <form onSubmit={this.handleSubmit} className='login-form'>
           <h1>Sign In</h1>
           <p className="login-first-p">Sign in to start watching or restart your membership</p>
