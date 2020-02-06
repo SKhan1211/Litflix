@@ -103,8 +103,8 @@ class Splash extends React.Component {
               <li><button><p>How does the free trial work?</p><span>+</span></button></li>
             </ul>
             <div className="signup-field2">
-              <input type="text" placeholder={"Username"} />
-              <Link to={"/signup"} className="signup-link2">TRY DEMO FREE ></Link>
+              <input type="text" placeholder={"Username" || this.state.requestedUser} onChange={this.update('requestedUser')}/>
+              <Link to={"/signup"} className="signup-link2" onClick={this.handleClick}>TRY DEMO FREE ></Link>
             </div>
             <p>Ready to watch? Enter a username to create or access your account</p>
           </div>
