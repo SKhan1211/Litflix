@@ -410,7 +410,7 @@
 
 
 
-# m = Movie.create({
+# m = Movie.create[remove]({
 #     title: 'test2', 
 #     description: 'test2', 
 #     year: 2019, 
