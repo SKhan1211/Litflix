@@ -57,7 +57,7 @@ action_movie_4 = Movie.create({
   genre: 'Action'
 })
 
-action_movie_4.video.attach(io: open("https://netflix-clone-pro.s3.us-east-2.amazonaws.com/Movies/Action/has.mp4.mp4"), filename: 'HobbsandShaw.mp4')
+action_movie_4.video.attach(io: open("https://netflix-clone-pro.s3.us-east-2.amazonaws.com/Movies/Action/has.mp4"), filename: 'HobbsandShaw.mp4')
 action_movie_4.photo.attach(io: open("https://netflix-clone-pro.s3.us-east-2.amazonaws.com/Movies/Pictures/Action/hastc.jpg"), filename: 'HobbsAndShaw.jpg')
 
 action_movie_5 = Movie.create({
