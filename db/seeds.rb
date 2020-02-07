@@ -49,7 +49,7 @@ action_movie_3.photo.attach(io: open("https://netflix-clone-pro.s3.us-east-2.ama
 
 action_movie_4 = Movie.create({
   title: 'Fast & Furious Presents: Hobbs & Shaw', 
-  description: 'Lawman Luke Hobbs (Dwayne The Rock Johnson) and outcast Deckard Shaw (Jason Statham) form an unlikely alliance when a cyber-genetically enhanced villain threatens the future of humanity.', 
+  description: 'Lawman Luke Hobbs (Dwayne "The Rock" Johnson) and outcast Deckard Shaw (Jason Statham) form an unlikely alliance when a cyber-genetically enhanced villain threatens the future of humanity.', 
   year: 2019, 
   length: '2h 17m', 
   rating: 'PG-13', 
@@ -57,7 +57,7 @@ action_movie_4 = Movie.create({
   genre: 'Action'
 })
 
-action_movie_4.video.attach(io: open("https://netflix-clone-pro.s3.us-east-2.amazonaws.com/Movies/Action/has.mp4"), filename: 'Hobbs&Shaw.mp4')
+action_movie_4.video.attach(io: open("https://netflix-clone-pro.s3.us-east-2.amazonaws.com/Movies/Action/has.mp4"), filename: 'HobbsAndShaw.mp4')
 action_movie_4.photo.attach(io: open("https://netflix-clone-pro.s3.us-east-2.amazonaws.com/Movies/Pictures/Action/hastc.jpg"), filename: 'HobbsAndShaw.jpg')
 
 action_movie_5 = Movie.create({
@@ -83,7 +83,7 @@ action_movie_6 = Movie.create({
   genre: 'Action'
 })
 
-action_movie_6.video.attach(io: open("https://netflix-clone-pro.s3.us-east-2.amazonaws.com/Movies/Action/gm.mp4.mp4"), filename: 'GeminiMan.mp4')
+action_movie_6.video.attach(io: open("https://netflix-clone-pro.s3.us-east-2.amazonaws.com/Movies/Action/gm.mp4"), filename: 'GeminiMan.mp4')
 action_movie_6.photo.attach(io: open("https://netflix-clone-pro.s3.us-east-2.amazonaws.com/Movies/Pictures/Action/gmtc.jpg"), filename: 'GeminiMan.jpg')
 
 
