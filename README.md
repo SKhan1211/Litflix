@@ -149,3 +149,10 @@ Each video also has an arrow and text to go back to the browse page. This was im
 }
 ```
 
+### Future Features
+* Ability to see video information such as title, year, genre, description, and MPAA rating when hovering over the video
+* Ability to see video information on click of the video and also see a play button which actually takes you to the watch page
+* Being able to create, save, and persist lists of movies in a feature called My List
+* Search feature that finds movies by title matching the characters the user types in the search field
+* Seperate pages for browse, movies, and latest navbar links
+
