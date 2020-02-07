@@ -25,7 +25,9 @@ html {
 
 .video-container {
   display: flex;
-  justify-content: space-evenly;
+
+  // justify-content: space-evenly;
+  
 }
 
 .img-link-1 {
@@ -36,6 +38,11 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  max-width: 285px;
+  // max-height: ;
+
+
 }
 
 .img-link-2 {
