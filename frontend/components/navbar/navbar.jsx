@@ -1,12 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import NavbarListItems from './navbar_list_items';
 
 class NavBar extends React.Component {
   constructor(props) {
     super(props);
     this.state = { 
       isOpen: false,
-      mouseOverMenu: false
+      mouseOverMenu: false,
+      fetchedMovies: []
     };
 
     this.handleOpen = this.handleOpen.bind(this);
@@ -14,6 +16,7 @@ class NavBar extends React.Component {
     this.handleFastClose = this.handleFastClose.bind(this);
     this.displayNotification = this.displayNotification.bind(this);
     this.undisplayNotification = this.undisplayNotification.bind(this);
+    this.fetchSomeMovies = this.fetchSomeMovies.bind(this);
   };
 
   handleOpen() {
@@ -42,13 +45,53 @@ class NavBar extends React.Component {
     }, 300);
   }
 
+  fetchSomeMovies() {
+    let that = this;
+    let moviesArr = [40, 36, 32, 28, 26, 22, 18, 12, 3];
+
+    moviesArr.forEach((num, idx) => {
+      this.props.fetchSingleMovie(num).then(movie => {
+        moviesArr[idx] = movie.movie
+      })
+    })
+
+    this.setState({ fetchedMovies: moviesArr })
+  }
+
+
+  componentDidMount() {
+    this.fetchSomeMovies();
+  }
+
   renderNotificationDropdown() {
+    const navbarTitlesArr = [
+      "Now Available to Watch",
+      "Continue Watching Captive State",
+      "New Arrival Ad Astra",
+      "Wondering what to watch? We suggest Annabelle Comes Home",
+      "New Arrival Scary Stories to Tell in the Dark",
+      "New Arrival Ford vs Ferrari",
+      "New Arrival Isn't It Romantic",
+      "Now Available to Watch",
+      "Now Available to Watch"
+    ];
+    const navbarDaysAgoArr = [
+      "5 days ago",
+      "8 days ago",
+      "10 days ago",
+      "2 weeks ago",
+      "1 month ago",
+      "1 month ago",
+      "2 months ago",
+      "2 months ago",
+      "2 months ago"
+    ];
     if (this.state.isOpen || this.state.mouseOverMenu) {
       return (
         <div className="notif-dropdown-outer" onMouseEnter={this.displayNotification} onMouseLeave={this.undisplayNotification}>
           <div className="notif-up-arrow">▲</div>
           <div className="notification-dropdown">
-            <ul>Content to be added...</ul>
+            <ul><NavbarListItems fetchedMovies={this.state.fetchedMovies} navbarTitles={navbarTitlesArr} navbarDaysAgo={navbarDaysAgoArr}/></ul>
           </div>
         </div>
       )

@@ -206,8 +206,8 @@
   border-left: 1px solid rgb(50, 50, 50);
   border-right: 1px solid rgb(50, 50, 50);
   overflow-y: scroll;
-  background-color: black;
-  opacity: 0.8;
+  // background-color: black;
+  // opacity: 0.8;
 }
 
 div.notif-up-arrow {
@@ -218,3 +218,46 @@ div.notif-up-arrow {
   left: 95%;
   top: 0.7%;
 }
+
+// .navbar-list-items-container {
+ 
+// }
+
+.navbar-list-items-img {
+  width: 120px;
+  padding: 13px;
+}
+
+.navbar-list-items-link {
+  border-bottom: 1px solid #2B2D2C;
+  display: flex;
+  height: 100px;
+  text-decoration: none;
+  background-color: black;
+  opacity: 0.8;
+}
+
+.navbar-list-items-link:hover {
+  background-color: black;
+  opacity: 1;
+}
+
+.navbar-list-items-textdiv {
+  align-self: center;
+  font-family: sans-serif;
+  line-height: 17px;
+  margin-left: 2px;
+}
+
+.navbar-list-items-textdiv > h3 {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+
+.navbar-list-items-textdiv > p {
+  text-decoration: none;
+  color: gray;
+  font-size: 13px;
+}
+
