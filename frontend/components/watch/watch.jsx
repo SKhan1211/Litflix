@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class Watch extends React.Component {
   constructor(props) {
@@ -6,6 +7,8 @@ class Watch extends React.Component {
     this.state = {
       currentMovie: {}
     }
+
+    this.handleLinkHover = this.handleLinkHover.bind(this);
   }
 
   componentDidMount() {
@@ -14,8 +17,17 @@ class Watch extends React.Component {
     })
   }
 
+  handleLinkHover(event) {
+    event.currentTarget.className = "watch-link-browse-shown";
+  }
+
   render() {
-    return <video muted autoPlay loop controls src={this.state.currentMovie.videoURL}></video>
+    return (
+      <div className="watch-component">
+        <div className="watch-box-div"><Link to="/browse" className="watch-link-browse" onMouseEnter={this.handleLinkHover}><img className="watch-back-arrow" src={window.backWhiteArrow} alt="" />Back to Browse</Link></div>
+        <video className="watch-video" muted autoPlay loop controls src={this.state.currentMovie.videoURL}></video>
+      </div>
+    )
   }
 }
 

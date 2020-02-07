@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { withRouter } from 'react-router';
 
 class ContentVideos extends React.Component {
   constructor(props) {
@@ -48,8 +49,8 @@ class ContentVideos extends React.Component {
           {
             this.props.movies.map((movie, idx) => (
               <Link to="#" className="img-link-1">
-                <img src={movie.photoURL} alt="Lorem Ipsum" className="row-1-col-1" onMouseEnter={this.handleOnHover} onMouseLeave={this.clear} />
-                <video muted autoPlay loop width="100" id="first-vid" className="mini-video-player-blank" onMouseLeave={this.handleOffHover} src={movie.videoURL}></video>
+                <img src={movie.photoURL} alt="Lorem Ipsum" className="row-1-col-1" onMouseEnter={this.handleOnHover} onMouseLeave={this.clear} onClick={() => this.props.history.push(`/watch/${movie.id}`)} />
+                <video muted autoPlay loop width="100" id="first-vid" className="mini-video-player-blank" onMouseLeave={this.handleOffHover} src={movie.videoURL} onClick={() => this.props.history.push(`/watch/${movie.id}`)}></video>
               </Link>
             ))
           }
@@ -59,4 +60,4 @@ class ContentVideos extends React.Component {
   }
 }
 
-export default ContentVideos;
+export default withRouter(ContentVideos);
