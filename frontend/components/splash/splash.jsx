@@ -43,7 +43,7 @@ class Splash extends React.Component {
               <h3>Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</h3>
             </div>
             <div className="tv-story-card">
-              <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png" alt="TV story card"/>
+              <img src={window.netflixTVImg} alt="TV story card"/>
               <div className="video-story-card">
                 <video autoPlay loop playsInline muted>
                   <source src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv.m4v" type="video/mp4" />
@@ -81,7 +81,7 @@ class Splash extends React.Component {
               <h3>Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV without paying more.</h3>
             </div>
             <div className="container-4-card">
-              <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/device-pile.png" alt="Mac story card" />
+              <img src={window.netflixMonitorImg} alt="Mac story card" />
               <div className="video-story-card2">
                 <video autoPlay loop playsInline muted>
                   <source src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices.m4v" type="video/mp4" />

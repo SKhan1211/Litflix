@@ -55,7 +55,7 @@ class LoginForm extends React.Component {
           <br />
           <div>
             <a href="#/login" className="facebook-link">
-              <img src="https://cdn.pixabay.com/photo/2017/06/22/06/22/facebook-2429746_1280.png" alt="Facebook Logo" style={{width: 20}}/>
+              <img src={window.facebookSignin} alt="Facebook Logo" style={{width: 20}}/>
               <span>Login with Facebook</span>
             </a>
           </div>
