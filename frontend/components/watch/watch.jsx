@@ -7,8 +7,6 @@ class Watch extends React.Component {
     this.state = {
       currentMovie: {}
     }
-
-    this.handleLinkHover = this.handleLinkHover.bind(this);
   }
 
   componentDidMount() {
@@ -17,14 +15,10 @@ class Watch extends React.Component {
     })
   }
 
-  handleLinkHover(event) {
-    event.currentTarget.className = "watch-link-browse-shown";
-  }
-
   render() {
     return (
       <div className="watch-component">
-        <div className="watch-box-div"><Link to="/browse" className="watch-link-browse" onMouseEnter={this.handleLinkHover}><img className="watch-back-arrow" src={window.backWhiteArrow} alt="" />Back to Browse</Link></div>
+        <Link to="/browse" className="watch-link-browse"><img className="watch-back-arrow" src={window.backWhiteArrow} alt="" />Back to Browse</Link>
         <video className="watch-video" muted autoPlay loop controls src={this.state.currentMovie.videoURL}></video>
       </div>
     )

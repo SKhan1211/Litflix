@@ -13,10 +13,10 @@
   align-items: center;
   top: 3%;
   left: 2%;
-  display: none;
+  opacity: 0;
 }
 
-.watch-box-div:hover + .watch-link-browse-shown {
+.watch-link-browse:hover {
   z-index: 1;
   position: absolute;
   color: white;
@@ -26,7 +26,7 @@
   align-items: center;
   top: 3%;
   left: 2%;
-  visibility: visible;
+  opacity: 1;
 }
 
 .watch-back-arrow {
