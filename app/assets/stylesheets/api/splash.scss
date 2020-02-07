@@ -63,9 +63,7 @@ body {
 }
 
 .splash-sign-in-div {
-  position: absolute;
-  top: 4%;
-  right: 1%
+  position: relative;
 }
 
 .splash-sign-in {
@@ -518,4 +516,35 @@ only screen and (min-device-pixel-ratio: 1.5){
   height: 15%;
   width: 12%;
   left: 3%;
+}
+
+.splash-demo-div {
+  position: relative;
+  margin-right: 18px;
+  order: -1
+}
+
+.splash-buttons-div {
+  position: absolute;
+  top: 4%;
+  right: 1%;
+  display: flex;
+  max-width: 100%;
+  height: auto;
+  justify-content: space-between;
+}
+
+.splash-demo-link {
+  position: relative;
+  background-color: #0f8212;
+  border: 1px solid #0f8212;
+  border-radius: 5px;
+  color: white;
+  height: 34px;
+  width: 85px;
+  font-size: 16.5px;
+  font-weight: 300;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 5px 15px 5px 15px;
 }

@@ -7,6 +7,7 @@ class Splash extends React.Component {
     this.state = this.props.requestedUser;
 
     this.handleClick = this.handleClick.bind(this);
+    this.loginDemoUser = this.loginDemoUser.bind(this);
   };
 
   update(field) {
@@ -17,14 +18,26 @@ class Splash extends React.Component {
     this.props.receiveRequestedUser(this.state.requestedUser);
   }
 
+  loginDemoUser() {
+    this.props.demoLogin({
+      username: 'username',
+      password: 'hunter12'
+    });
+  }
+
   render() {
     return (
       <div className="main-container">
           <img src={window.bendyLogo} id="first-logo-splash" />
         <section className="container-1">
           <img src={window.background} height="977" width="1450"/>
-          <div className="splash-sign-in-div"> 
-            <Link to="/login" className="splash-sign-in">Sign In</Link>
+          <div className="splash-buttons-div">
+            <div className="splash-sign-in-div">
+              <Link to="/login" className="splash-sign-in">Sign In</Link>
+            </div>
+            <div className="splash-demo-div"> 
+              <Link to="/" className="splash-demo-link" onClick={this.loginDemoUser}>Demo</Link>
+            </div>
           </div>
           <div className="container-1-main">
             <h2>Unlimited movies, TV shows, and more.</h2>
