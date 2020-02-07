@@ -46,7 +46,7 @@ class Splash extends React.Component {
               <img src={window.netflixTVImg} alt="TV story card"/>
               <div className="video-story-card">
                 <video autoPlay loop playsInline muted>
-                  <source src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv.m4v" type="video/mp4" />
+                  <source src="https://netflix-clone-pro.s3.us-east-2.amazonaws.com/netflix-assets/netflix-video-1.m4v" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               </div>
@@ -84,7 +84,7 @@ class Splash extends React.Component {
               <img src={window.netflixMonitorImg} alt="Mac story card" />
               <div className="video-story-card2">
                 <video autoPlay loop playsInline muted>
-                  <source src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices.m4v" type="video/mp4" />
+                  <source src="https://netflix-clone-pro.s3.us-east-2.amazonaws.com/netflix-assets/netflix-video-2.m4v" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               </div>
