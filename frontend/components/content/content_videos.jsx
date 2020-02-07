@@ -48,7 +48,7 @@ class ContentVideos extends React.Component {
           {
             this.props.movies.map((movie, idx) => (
               <Link to="#" className="img-link-1">
-                <img src="https://assets.justinmind.com/wp-content/uploads/2018/11/Lorem-Ipsum-alternatives.png" alt="Lorem Ipsum" className="row-1-col-1" onMouseEnter={this.handleOnHover} onMouseLeave={this.clear} />
+                <img src={movie.photoURL} alt="Lorem Ipsum" className="row-1-col-1" onMouseEnter={this.handleOnHover} onMouseLeave={this.clear} />
                 <video muted autoPlay loop width="100" id="first-vid" className="mini-video-player-blank" onMouseLeave={this.handleOffHover} src={movie.videoURL}></video>
               </Link>
             ))
