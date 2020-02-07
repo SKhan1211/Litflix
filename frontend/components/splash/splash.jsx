@@ -31,7 +31,7 @@ class Splash extends React.Component {
             <h3>Watch anywhere. Cancel anytime.</h3>
             <div className="signup-field">
               <input type="text" placeholder={"Username" || this.state.requestedUser} onChange={this.update('requestedUser')}/>
-              <Link to={"/signup"} className="signup-link" onClick={this.handleClick}>TRY DEMO FREE ></Link>
+              <Link to={"/signup"} className="signup-link" onClick={this.handleClick}>SIGN UP NOW ></Link>
             </div>
             <p>Ready to watch? Enter a username to create or access your account</p>
           </div>
@@ -104,7 +104,7 @@ class Splash extends React.Component {
             </ul>
             <div className="signup-field2">
               <input type="text" placeholder={"Username" || this.state.requestedUser} onChange={this.update('requestedUser')}/>
-              <Link to={"/signup"} className="signup-link2" onClick={this.handleClick}>TRY DEMO FREE ></Link>
+              <Link to={"/signup"} className="signup-link2" onClick={this.handleClick}>SIGN UP NOW ></Link>
             </div>
             <p>Ready to watch? Enter a username to create or access your account</p>
           </div>
