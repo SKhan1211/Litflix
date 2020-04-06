@@ -66,18 +66,27 @@ class NavBar extends React.Component {
   }
 
   handleSearchInput() {
-    if (this.state.searchInputShown) {
+    if (this.state.searchInputShown 
+          && event.target.className !== "navbar-search-input-shown" 
+          && event.target.className !== "fas fa-search"
+        ) {
       document.getElementsByClassName("navbar-search-input-shown")[0].className = "navbar-search-input-hidden";
       let container = document.getElementsByClassName("navbar-right")[0]
       let firstHalfClassName = container.className.slice(0, 12);
       container.className = firstHalfClassName + " smaller-width"
       this.setState({ searchInputShown: false });
+
+      document.removeEventListener("click", this.handleSearchInput)
     } else if (!this.state.searchInputShown) {
-      document.getElementsByClassName("navbar-search-input-hidden")[0].className = "navbar-search-input-shown";
+      let input = document.getElementsByClassName("navbar-search-input-hidden")[0]
+      input.focus();
+      input.className = "navbar-search-input-shown";
       let container = document.getElementsByClassName("navbar-right")[0]
       let firstHalfClassName = container.className.slice(0, 12);
       container.className = firstHalfClassName + " bigger-width"
       this.setState({ searchInputShown: true });
+
+      document.addEventListener("click", this.handleSearchInput)
     };
   };
 
@@ -133,7 +142,7 @@ class NavBar extends React.Component {
             {/* <img src={window.searchIcon} height="20" width="20" /> */}
             <div className="navbar-right-search-container">
               <i class="fas fa-search" onClick={this.handleSearchInput}></i>
-              <input className="navbar-search-input-hidden" type="text" placeholder="Titles"></input>
+              <input className="navbar-search-input-hidden" type="text" placeholder="Titles..."></input>
             </div>
             {/* <Link className="navbar-right-link" to={"/browse"}>DVD</Link> */}
             {/* <img src={window.whiteBellIcon} height="35" width="35" onMouseEnter={this.handleOpen} onMouseLeave={this.handleClose}/> */}
