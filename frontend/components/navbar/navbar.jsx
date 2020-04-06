@@ -113,8 +113,9 @@ class NavBar extends React.Component {
           <div className="trial-margin"></div>
           <div className="navbar-right">
             <img src={window.searchIcon} height="20" width="20" />
-            <Link className="navbar-right-link" to={"/browse"}>DVD</Link>
-            <img src={window.whiteBellIcon} height="35" width="35" onMouseEnter={this.handleOpen} onMouseLeave={this.handleClose}/>
+            {/* <Link className="navbar-right-link" to={"/browse"}>DVD</Link> */}
+            {/* <img src={window.whiteBellIcon} height="35" width="35" onMouseEnter={this.handleOpen} onMouseLeave={this.handleClose}/> */}
+            <i class="fas fa-bell" onMouseEnter={this.handleOpen} onMouseLeave={this.handleClose}></i>
             {this.renderNotificationDropdown()}
             <div className="profile-pic-container">
               <img src={window.profilePic} height="360" width="490" onMouseEnter={this.handleFastClose}/>

@@ -19,7 +19,7 @@ class Content extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchAllMovies().then(movies => this.divideByGenre(movies))
+    // this.props.fetchAllMovies().then(movies => this.divideByGenre(movies))
   }
 
   divideByGenre(movies) {
