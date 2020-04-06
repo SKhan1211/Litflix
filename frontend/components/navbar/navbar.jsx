@@ -8,7 +8,8 @@ class NavBar extends React.Component {
     this.state = { 
       isOpen: false,
       mouseOverMenu: false,
-      fetchedMovies: []
+      fetchedMovies: [],
+      searchInputShown: false
     };
 
     this.handleOpen = this.handleOpen.bind(this);
@@ -17,6 +18,7 @@ class NavBar extends React.Component {
     this.displayNotification = this.displayNotification.bind(this);
     this.undisplayNotification = this.undisplayNotification.bind(this);
     this.fetchSomeMovies = this.fetchSomeMovies.bind(this);
+    this.handleSearchInput = this.handleSearchInput.bind(this);
   };
 
   handleOpen() {
@@ -60,8 +62,24 @@ class NavBar extends React.Component {
 
 
   componentDidMount() {
-    this.fetchSomeMovies();
+    // this.fetchSomeMovies();
   }
+
+  handleSearchInput() {
+    if (this.state.searchInputShown) {
+      document.getElementsByClassName("navbar-search-input-shown")[0].className = "navbar-search-input-hidden";
+      let container = document.getElementsByClassName("navbar-right")[0]
+      let firstHalfClassName = container.className.slice(0, 12);
+      container.className = firstHalfClassName + " smaller-width"
+      this.setState({ searchInputShown: false });
+    } else if (!this.state.searchInputShown) {
+      document.getElementsByClassName("navbar-search-input-hidden")[0].className = "navbar-search-input-shown";
+      let container = document.getElementsByClassName("navbar-right")[0]
+      let firstHalfClassName = container.className.slice(0, 12);
+      container.className = firstHalfClassName + " bigger-width"
+      this.setState({ searchInputShown: true });
+    };
+  };
 
   renderNotificationDropdown() {
     const navbarTitlesArr = [
@@ -111,11 +129,11 @@ class NavBar extends React.Component {
             <Link to={"/browse"} className="navbar-left-link">My List</Link>
           </div>
           <div className="trial-margin"></div>
-          <div className="navbar-right">
+          <div className="navbar-right smaller-width">
             {/* <img src={window.searchIcon} height="20" width="20" /> */}
             <div className="navbar-right-search-container">
-              <i class="fas fa-search"></i>
-              <input type="text" placeholder="Titles"></input>
+              <i class="fas fa-search" onClick={this.handleSearchInput}></i>
+              <input className="navbar-search-input-hidden" type="text" placeholder="Titles"></input>
             </div>
             {/* <Link className="navbar-right-link" to={"/browse"}>DVD</Link> */}
             {/* <img src={window.whiteBellIcon} height="35" width="35" onMouseEnter={this.handleOpen} onMouseLeave={this.handleClose}/> */}
