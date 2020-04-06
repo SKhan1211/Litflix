@@ -7,6 +7,20 @@ html {
   background-color: #101010;
 }
 
+.structure-container {
+  animation: fadein 1s;
+  -webkit-animation: fadein 1s;
+}
+
+@keyframes fadein { 
+    0% { 
+        background-color: #464646;
+    } 
+    100% { 
+        background-color: #101010;
+     } 
+} 
+
 .content-container {
   margin: 0% 4% 0% 4%;
   padding-bottom: 5%;
