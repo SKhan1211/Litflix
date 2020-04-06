@@ -8,6 +8,11 @@
 
 require 'open-uri'
 
+User.create({
+  username: 'username',
+  password: 'hunter12'
+})
+
 action_movie_1 = Movie.create({
   title: 'John Wick: Chapter 3 - Parabellum', 
   description: 'John Wick is on the run after killing a member of the international assassins guild, and with a $14 million price tag on his head, he is the target of hit men and women everywhere.', 

@@ -4,10 +4,14 @@ import { Link } from 'react-router-dom';
 class Splash extends React.Component {
   constructor(props) {
     super(props);
-    this.state = this.props.requestedUser;
+    this.state = {
+      requestedUser: this.props.requestedUser,
+      showProjects: false
+    };
 
     this.handleClick = this.handleClick.bind(this);
     this.loginDemoUser = this.loginDemoUser.bind(this);
+    this.viewProjects = this.viewProjects.bind(this);
   };
 
   update(field) {
@@ -23,6 +27,24 @@ class Splash extends React.Component {
       username: 'username',
       password: 'hunter12'
     });
+  }
+
+  viewProjects(event) {
+    event.preventDefault();
+    if (this.state.showProjects) {
+      this.setState({ showProjects: false });
+      const li = document.getElementsByClassName("ul-li-last-li")[0];
+      document.getElementById("ul-li-last-section").style.display = "none";
+      document.getElementById("ul-li-transform-plus").id = "ul-li-transform"
+      li.className = "ul-li-last-li-hidden";
+    } 
+    else if (!this.state.showProjects) {
+      this.setState({ showProjects: true });
+      const li = document.getElementsByClassName("ul-li-last-li-hidden")[0];
+      document.getElementById("ul-li-last-section").style.display = "flex";
+      document.getElementById("ul-li-transform").id = "ul-li-transform-plus"
+      li.className = "ul-li-last-li";
+    }
   }
 
   render() {
@@ -106,14 +128,30 @@ class Splash extends React.Component {
         </section>
         <section className="container-5">
           <div className="container-5-main">
-            <h2>Frequently Asked Questions</h2>
+            <h2>About the Developer</h2>
             <ul className="ul-li-list">
-              <li><button><p>What is Litflix?</p><span>+</span></button></li>
-              <li><button><p>How much does Litflix cost?</p><span>+</span></button></li>
-              <li><button><p>Where can I watch?</p><span>+</span></button></li>
-              <li><button><p>How do I cancel?</p><span>+</span></button></li>
-              <li><button><p>What can I watch on Litflix?</p><span>+</span></button></li>
-              <li><button><p>How does the free trial work?</p><span>+</span></button></li>
+              <li><div><p>Full-Stack Software Engineer</p><span>&lt;</span></div></li>
+              <li><div><p>React, Redux, GraphQL, JavaScript, MongoDB, Ruby on Rails, and more!</p><span>&lt;</span></div></li>
+              <li><a className="ul-li-hover" target="_blank" href="https://www.linkedin.com/in/thesuhaibkhan/"><p><i class="fab fa-linkedin"></i>LinkedIn</p><span>&lt;</span></a></li>
+              <li><a className="ul-li-hover" target="_blank" href="https://github.com/SKhan1211"><p><i class="fab fa-github"></i>Github</p><span>&lt;</span></a></li>
+              <li><a className="ul-li-hover" target="_blank" href="https://www.thesuhaibkhan.com"><p><i class="fas fa-user"></i>Personal Site</p><span>&lt;</span></a></li>
+              <li><a className="ul-li-hover" onClick={this.viewProjects} target="_blank" href="#"><p>View my other projects</p><span id="ul-li-transform">+</span></a></li>
+              <li className="ul-li-last-li-hidden">
+                <section id="ul-li-last-section">
+                  <a href="https://openstableapp.herokuapp.com/#/" target="_blank">
+                    <p>OpenStable</p><p className="ul-li-2nd-p">A reservation booking platform for horse tours inspired by OpenTable. Implemented with the MERN stack and GraphQL</p>
+                    <img width="400" src="https://s3.amazonaws.com/poly-screenshots.angel.co/Project/d1/1127338/1152415ced097f95d174db7ce8d7107d-original.png"></img>
+                  </a>
+                  <a href="https://whooopwhooop.herokuapp.com/#/" target="_blank">
+                    <p>Whoop</p><p className="ul-li-2nd-p">A website based on Yelp where users can find, rate, and review restaurants. Created with React.js, Redux, and MongoDB</p>
+                    <img width="400" src="https://s3.amazonaws.com/poly-screenshots.angel.co/Project/16/1127342/8750c200ed1921c670b4bb3ddc48d8bb-original.png"></img>
+                  </a>
+                  <a href="https://skhan1211.github.io/Flextris/dist/index.html" target="_blank">
+                    <p>Flextris</p><p className="ul-li-2nd-p">A full interactive version of Tetris. Designed in JavaScript, displayed with HTML5 Canvas, and bundled with Webpack	 </p>
+                    <img width="400" src="https://s3.amazonaws.com/poly-screenshots.angel.co/Project/51/1127345/6c6ef26221c06c739c66db6f822900d5-original.png"></img>
+                  </a>
+                </section>
+              </li>
             </ul>
             <div className="signup-field2">
               <input type="text" placeholder={"Username" || this.state.requestedUser} onChange={this.update('requestedUser')}/>

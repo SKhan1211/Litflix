@@ -411,8 +411,8 @@ only screen and (min-device-pixel-ratio: 1.5){
   display: flex;
   flex-direction: column;
   position: relative;
-  height: 858px;
-  max-height: 858px;
+  // height: 858px;
+  // max-height: 858px;
   top: 0;
   left: 0;
   border-bottom: solid 8px #212121;
@@ -435,6 +435,7 @@ only screen and (min-device-pixel-ratio: 1.5){
   font-weight: 600;
   letter-spacing: 1px;
   margin-top: 5px;
+  padding-top: 4rem;
 }
 
 .ul-li-list {
@@ -459,6 +460,57 @@ only screen and (min-device-pixel-ratio: 1.5){
   align-items: center;
 }
 
+.ul-li-list div {
+  height: 75px;
+  width: 61%;
+  color: white;
+  background-color: #303030;
+  border: 1px solid #303030;
+  text-align: left;
+  font-size: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fa-linkedin {
+  color: #0e5c8e;
+}
+
+.fa-github {
+  color: black;
+}
+
+.fa-user {
+  color: #8a5505;
+}
+
+.ul-li-list i {
+  padding-right: 18px;
+}
+
+.ul-li-hover:hover {
+  background-color: #1b1a1a;
+}
+
+.ul-li-list i:nth-child(2) {
+  color: black;
+}
+
+.ul-li-list a {
+  height: 75px;
+  width: 61%;
+  color: white;
+  background-color: #303030;
+  border: 1px solid #303030;
+  text-align: left;
+  font-size: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+}
+
 .ul-li-list li {
   display: flex;
   margin: 5px;
@@ -473,6 +525,73 @@ only screen and (min-device-pixel-ratio: 1.5){
   font-size: 50px;
   font-weight: 200;
   margin-right: 20px;
+}
+
+.ul-li-list > section {
+  display: flex;
+  justify-content: center;
+}
+
+.ul-li-last-li > section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ul-li-last-li a {
+  flex-direction: column;
+  height: auto;
+  font-size: 25px;
+  padding: 15px 0px;
+  border-bottom: 1px solid #4a4a4a;
+  border-left: 1px solid #4a4a4a;
+  border-right: 1px solid #4a4a4a;
+  text-align: center;
+  width: 57vw;
+}
+
+.ul-li-last-li {
+  height: 1155px;
+  opacity: 1;
+  transition: all 0.35s cubic-bezier(0.5, 0, 0.1, 1);
+}
+
+.ul-li-last-li a:hover {
+  background-color: #1b1a1a;
+}
+
+.ul-li-last-li img {
+  z-index: 1;
+  border-radius: 4px;
+}
+
+.ul-li-2nd-p {
+  font-size: 21px;
+}
+
+.ul-li-last-li p {
+  margin-bottom: 20px;
+  margin-left: 0;
+  padding: 0px 10px
+}
+
+.ul-li-list li:last-of-type {
+  margin-top: 0px;
+}
+
+.ul-li-list li:nth-of-type(6) {
+  margin-bottom: 1px;
+}
+
+.ul-li-last-li-hidden {
+  opacity: 0;
+  z-index: -1;
+  height: 0;
+  transition: all 0.35s cubic-bezier(0.5, 0, 0.1, 1);
+}
+
+#ul-li-last-section {
+  display: none;
 }
 
 .signup-field2 {
@@ -507,6 +626,7 @@ only screen and (min-device-pixel-ratio: 1.5){
   font-size: 19px;
   font-weight: 300;
   margin-top: 20px;
+  padding-bottom: 2.5rem;
 }
 
 #first-logo-splash {
@@ -547,4 +667,8 @@ only screen and (min-device-pixel-ratio: 1.5){
   cursor: pointer;
   text-decoration: none;
   padding: 5px 15px 5px 15px;
+}
+
+#ul-li-transform-plus {
+  transform: rotate(45deg);
 }

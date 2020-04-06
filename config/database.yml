@@ -19,6 +19,8 @@ default: &default
   encoding: unicode
   # For details on connection pooling, see Rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
+  url: <%= ENV['DATABASE_URL'] %>
+  # <%= ENV['LITFLIX_DATABASE_PASSWORD'] %>
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
@@ -80,6 +82,11 @@ test:
 #
 production:
   <<: *default
-  database: Litflix_production
-  username: Litflix
-  password: <%= ENV['LITFLIX_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  host: db
+  username: postgres
+  password:
+  # database: Litflix_production
+  # host: db
+  # username: Litflix
+  # password: 
