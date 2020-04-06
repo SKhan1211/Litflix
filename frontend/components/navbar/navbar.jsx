@@ -112,7 +112,11 @@ class NavBar extends React.Component {
           </div>
           <div className="trial-margin"></div>
           <div className="navbar-right">
-            <img src={window.searchIcon} height="20" width="20" />
+            {/* <img src={window.searchIcon} height="20" width="20" /> */}
+            <div className="navbar-right-search-container">
+              <i class="fas fa-search"></i>
+              <input type="text" placeholder="Titles"></input>
+            </div>
             {/* <Link className="navbar-right-link" to={"/browse"}>DVD</Link> */}
             {/* <img src={window.whiteBellIcon} height="35" width="35" onMouseEnter={this.handleOpen} onMouseLeave={this.handleClose}/> */}
             <i class="fas fa-bell" onMouseEnter={this.handleOpen} onMouseLeave={this.handleClose}></i>
