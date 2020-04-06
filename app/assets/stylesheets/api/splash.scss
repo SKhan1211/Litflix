@@ -547,11 +547,12 @@ only screen and (min-device-pixel-ratio: 1.5){
   border-left: 1px solid #4a4a4a;
   border-right: 1px solid #4a4a4a;
   text-align: center;
-  width: 57vw;
+  width: 56.9vw;
+  max-width: 1038px;
 }
 
 .ul-li-last-li {
-  height: 1155px;
+  height: 1100px;
   opacity: 1;
   transition: all 0.35s cubic-bezier(0.5, 0, 0.1, 1);
 }
@@ -672,3 +673,15 @@ only screen and (min-device-pixel-ratio: 1.5){
 #ul-li-transform-plus {
   transform: rotate(45deg);
 }
+
+@media only screen and (max-width: 1032px) {
+  .ul-li-last-li {
+    height: 1155px;
+  }
+}
+
+// @media only screen and (min-width: ) {
+//   .ul-li-last-li a {
+//     width: 56vw;
+//   }
+// }
