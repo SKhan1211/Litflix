@@ -112,8 +112,8 @@ html {
 
 .mini-video-player {
   display: block;
-  position: absolute;
-  width: 140%;
+  // position: absolute;
+  width: 100%;
   min-width: 170px;
   z-index: 1;
   flex-shrink: 0;
@@ -140,10 +140,15 @@ html {
   color: white;
   z-index: 1;
   position: absolute;
-  left: -10%;
-  width: 131%;
-  top: 27%;
+  left: 3%;
+  width: 94%;
+  top: 55px;
   cursor: auto;
+  display: block;
+}
+
+.img-link-text-container-hidden {
+  display: none;
 }
 
 .img-link-info-container {
@@ -194,4 +199,17 @@ html {
   text-shadow: 1px 1px #464545;
   padding-bottom: 5px;
   cursor: default;
+}
+
+.img-link-vid-container {
+  display: block;
+  position: absolute;
+  height: 127%;
+  width: 144%;
+  min-width: 170px;
+  z-index: 1;
+  flex-shrink: 0;
+  cursor: auto;
+  left: -23%;
+  top: -14%;
 }
