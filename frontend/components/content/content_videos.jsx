@@ -58,6 +58,17 @@ class ContentVideos extends React.Component {
           <Link to="#" className="img-link-1">
             <img src={"https://assets.justinmind.com/wp-content/uploads/2018/11/Lorem-Ipsum-alternatives.png"} alt="Lorem Ipsum" className="row-1-col-1" onMouseEnter={this.handleOnHover} onMouseLeave={this.clear} />
             <video muted autoPlay loop width="100" id="first-vid" className="mini-video-player-blank" onMouseLeave={this.handleOffHover} src={"https://ak4.picdn.net/shutterstock/videos/1014118994/preview/stock-footage-an-ancient-wooden-tablet-filled-with-carved-runic-signs-d-panning-from-top-left-to-bottom-right.webm"}></video>
+            <div className="img-link-text-container">
+              <Link to="#"><i class="far fa-play-circle"></i></Link>
+              <div className="img-link-info-container">
+                <div>
+                  <h1>Movie title</h1>
+                  <h2>MPAA, length</h2>
+                  <p>Genre</p>
+                </div>
+                <button><i class="fas fa-plus"></i></button>
+              </div>
+            </div>
           </Link>
           <Link to="#" className="img-link-1">
             <img src={"https://assets.justinmind.com/wp-content/uploads/2018/11/Lorem-Ipsum-alternatives.png"} alt="Lorem Ipsum" className="row-1-col-1" onMouseEnter={this.handleOnHover} onMouseLeave={this.clear} />

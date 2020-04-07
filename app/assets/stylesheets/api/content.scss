@@ -135,3 +135,19 @@ html {
   right: -14%;
 }
 
+.img-link-text-container {
+  color: white;
+  z-index: 1;
+  position: absolute;
+  left: -13%;
+  width: 140%;
+}
+
+.img-link-info-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.far.fa-play-circle {
+  font-size: 2.5vw;
+}
