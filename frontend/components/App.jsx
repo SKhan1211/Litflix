@@ -6,6 +6,7 @@ import SplashContainer from './splash/splash_container';
 import SignupFormContainer from './signup_form/signup_form_container';
 import WatchContainer from './watch/watch_container';
 import Browse from './browse/browse';
+import Movies from './movies/movies';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 const App = () => (
@@ -15,6 +16,7 @@ const App = () => (
       <AuthRoute exact path="/signup" component={SignupFormContainer} />
       <ProtectedRoute exact path="/browse" component={Browse} />
       <ProtectedRoute exact path="/watch/:mediaId" component={WatchContainer} />
+      <ProtectedRoute exact path="/movies" component={Movies} />
       <AuthRoute path="/" component={SplashContainer}/>
     </Switch>
   </div>

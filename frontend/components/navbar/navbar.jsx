@@ -68,7 +68,6 @@ class NavBar extends React.Component {
   handleSearchInput() {
     if (this.state.searchInputShown 
           && event.target.className !== "navbar-search-input-shown" 
-          && event.target.className !== "fas fa-search"
         ) {
       document.getElementsByClassName("navbar-search-input-shown")[0].className = "navbar-search-input-hidden";
       let container = document.getElementsByClassName("navbar-right")[0]
@@ -133,7 +132,7 @@ class NavBar extends React.Component {
           <Link to="/browse" id="first-link-navbar"><img src={window.bendyLogo} width="120" height="74" /></Link>
           <div className="navbar-left">
             <Link to={"/browse"} className="navbar-left-link">Home</Link>
-            <Link to={"/browse"} className="navbar-left-link">Movies</Link>
+            <Link to={"/movies"} className="navbar-left-link">Movies</Link>
             <Link to={"/browse"} className="navbar-left-link">Latest</Link>
             <Link to={"/browse"} className="navbar-left-link">My List</Link>
           </div>
