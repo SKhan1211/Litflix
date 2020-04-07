@@ -117,6 +117,7 @@ html {
   min-width: 170px;
   z-index: 1;
   flex-shrink: 0;
+  cursor: auto;
 }
 
 .mini-video-player-blank {
@@ -142,6 +143,7 @@ html {
   left: -10%;
   width: 131%;
   top: 27%;
+  cursor: auto;
 }
 
 .img-link-info-container {
@@ -179,8 +181,17 @@ html {
   transform: scale(1.15);
 }
 
-.img-link-text-container {
+.img-link-text-container h1 {
   font-weight: 600;
   text-shadow: 1px 1px #464545;
   font-size: 1.1vw;
+  padding-bottom: 5px;
+  cursor: default;
+}
+
+.img-link-text-container h2, .img-link-text-container p {
+  font-size: 0.9vw;
+  text-shadow: 1px 1px #464545;
+  padding-bottom: 5px;
+  cursor: default;
 }
