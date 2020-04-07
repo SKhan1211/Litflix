@@ -19,7 +19,7 @@ class Content extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchAllMovies().then(movies => this.divideByGenre(movies))
+    // this.props.fetchAllMovies().then(movies => this.divideByGenre(movies))
   }
 
   divideByGenre(movies) {
@@ -84,9 +84,9 @@ class Content extends React.Component {
           </div>
         :
           <div className="content-container">
-            <ContentVideos title={"Latest Releases"} movies={this.state.movieSet3.slice(0, 3).concat(this.state.movieSet6.slice(0, 3))} />
-            <ContentVideos title={""} movies={this.state.movieSet7.slice(0, 3).concat(this.state.movieSet4.slice(0, 3))} />
-            <ContentVideos title={""} movies={this.state.movieSet1.slice(0, 3).concat(this.state.movieSet5.slice(0, 3))} />
+            <ContentVideos title={"Latest Releases"} movies={this.state.movieSet4.slice(0, 3).concat(this.state.movieSet2.slice(0, 3))} />
+            <ContentVideos title={""} movies={this.state.movieSet7.slice(0, 3).concat(this.state.movieSet1.slice(0, 3))} />
+            <ContentVideos title={""} movies={this.state.movieSet2.slice(0, 3).concat(this.state.movieSet5.slice(0, 3))} />
           </div>
         }
       </div>
