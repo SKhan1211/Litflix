@@ -75,12 +75,12 @@ class Content extends React.Component {
           </div>
         : 
           <div className="content-container">
-            <ContentVideos title={"New Releases"} movies={this.state.movieSet1} />
-            <ContentVideos title={"Trending Now"} movies={this.state.movieSet2}  />
-            <ContentVideos title={"Popular on Litflix"} movies={this.state.movieSet3}  />
-            <ContentVideos title={"Continue Watching"} movies={this.state.movieSet4}  />
-            <ContentVideos title={`Top Picks for You`} movies={this.state.movieSet5} />
-            <ContentVideos title={"Continue Watching"} movies={this.state.movieSet6}  />
+            <ContentVideos title={"New Releases"} movies={this.state.movieSet3.slice(0, 3).concat(this.state.movieSet6.slice(0, 3))} />
+            <ContentVideos title={"Trending Now"} movies={this.state.movieSet2.slice(0, 3).concat(this.state.movieSet5.slice(0, 2))}  />
+            <ContentVideos title={"Popular on Litflix"} movies={this.state.movieSet1.slice(0, 3).concat(this.state.movieSet4.slice(0, 3))}  />
+            <ContentVideos title={"Continue Watching"} movies={this.state.movieSet5.slice(3, 6).concat(this.state.movieSet7.slice(3, 6))}  />
+            <ContentVideos title={"Top Picks for You"} movies={this.state.movieSet4.slice(3, 5).concat(this.state.movieSet1.slice(3, 5))} />
+            <ContentVideos title={"Continue Watching"} movies={this.state.movieSet7.slice(3, 6).concat(this.state.movieSet2.slice(3, 6))}  />
           </div>
         }
       </div>
