@@ -6,7 +6,7 @@ const Browse = () => {
   return (
     <React.Fragment>
       <NavBarContainer />
-      <ContentContainer />
+      <ContentContainer path={"browse"}/>
     </React.Fragment>
   )
 }

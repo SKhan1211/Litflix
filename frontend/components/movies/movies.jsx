@@ -6,7 +6,7 @@ const Movies = () => {
   return (
     <React.Fragment>
       <NavBarContainer />
-      <ContentContainer />
+      <ContentContainer path={"movies"}/>
     </React.Fragment>
   )
 };

@@ -63,15 +63,26 @@ class Content extends React.Component {
   render() {
     return (
       <div className="structure-container">
-        <div className="content-container">
-          <ContentVideos title={"Action"} movies={this.state.movieSet1} title={"Action"} />
-          <ContentVideos title={"Adventure"} movies={this.state.movieSet2} title={"Adventure"} />
-          <ContentVideos title={"Comedy"} movies={this.state.movieSet3} title={"Comedy"} />
-          <ContentVideos title={"Drama"} movies={this.state.movieSet4} title={"Drama"} />
-          <ContentVideos title={"Horror"} movies={this.state.movieSet5} title={"Horror"} />
-          <ContentVideos title={"Sci-Fi"} movies={this.state.movieSet6} title={"Sci-Fi"} />
-          <ContentVideos title={"Romance"} movies={this.state.movieSet7} title={"Romance"} />
-        </div>
+        {this.props.path === "browse" ? 
+          <div className="content-container">
+            <ContentVideos title={"Action"} movies={this.state.movieSet1} title={"Action"} />
+            <ContentVideos title={"Adventure"} movies={this.state.movieSet2} title={"Adventure"} />
+            <ContentVideos title={"Comedy"} movies={this.state.movieSet3} title={"Comedy"} />
+            <ContentVideos title={"Drama"} movies={this.state.movieSet4} title={"Drama"} />
+            <ContentVideos title={"Horror"} movies={this.state.movieSet5} title={"Horror"} />
+            <ContentVideos title={"Sci-Fi"} movies={this.state.movieSet6} title={"Sci-Fi"} />
+            <ContentVideos title={"Romance"} movies={this.state.movieSet7} title={"Romance"} />
+          </div>
+        : 
+          <div className="content-container">
+            <ContentVideos title={"New Releases"} movies={this.state.movieSet1} />
+            <ContentVideos title={"Trending Now"} movies={this.state.movieSet2}  />
+            <ContentVideos title={"Popular on Litflix"} movies={this.state.movieSet3}  />
+            <ContentVideos title={"Continue Watching"} movies={this.state.movieSet4}  />
+            <ContentVideos title={`Top Picks for You`} movies={this.state.movieSet5} />
+            <ContentVideos title={"Continue Watching"} movies={this.state.movieSet6}  />
+          </div>
+        }
       </div>
     )
   }
