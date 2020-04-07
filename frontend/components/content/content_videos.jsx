@@ -21,7 +21,8 @@ class ContentVideos extends React.Component {
       this.setState({ isHovered: true });
       event.persist();
       timeout = setTimeout(() => {
-        event.target.parentElement.children[2].className = "mini-video-player"
+        // event.target.parentElement.children[2].className = "mini-video-player"
+        event.target.parentElement.children[1].className = "img-link-vid-container";
       }, 700)
     }
   }
@@ -30,13 +31,14 @@ class ContentVideos extends React.Component {
     clearTimeout(timeout)
     if (this.state.isHovered) {
       this.setState({ isHovered: false, currentMovie: {} })
-      event.currentTarget.className = "mini-video-player-blank";
+      // event.currentTarget.className = "mini-video-player-blank";
+      event.target.parentElement.className = "img-link-vid-container-hidden";
     }
   }
 
   clear(event) {
     clearTimeout(timeout)
-    if (event.target.parentElement.children[2].className !== 'mini-video-player') {
+    if (event.target.parentElement.children[1].className !== 'img-link-vid-container') {
       this.setState({ isHovered: false})
     }
   }
@@ -57,7 +59,7 @@ class ContentVideos extends React.Component {
 
           <Link to="#" className="img-link-1">
             <img src={"https://assets.justinmind.com/wp-content/uploads/2018/11/Lorem-Ipsum-alternatives.png"} alt="Lorem Ipsum" className="row-1-col-1" onMouseEnter={this.handleOnHover} onMouseLeave={this.clear} />
-            <div className="img-link-vid-container">
+            <div className="img-link-vid-container-hidden" onMouseLeave={this.handleOffHover}>
               <video muted autoPlay loop width="100" id="first-vid" className="mini-video-player" onMouseLeave={this.handleOffHover} src={"https://ak4.picdn.net/shutterstock/videos/1014118994/preview/stock-footage-an-ancient-wooden-tablet-filled-with-carved-runic-signs-d-panning-from-top-left-to-bottom-right.webm"}></video>
               <div id="img-link-text" className="img-link-text-container">
                 <Link to="#"><i class="far fa-play-circle" onClick={() => this.props.history.push(`/watch/${movie.id}`)}></i></Link>
@@ -74,23 +76,88 @@ class ContentVideos extends React.Component {
           </Link>
           <Link to="#" className="img-link-1">
             <img src={"https://assets.justinmind.com/wp-content/uploads/2018/11/Lorem-Ipsum-alternatives.png"} alt="Lorem Ipsum" className="row-1-col-1" onMouseEnter={this.handleOnHover} onMouseLeave={this.clear} />
-            <video muted autoPlay loop width="100" id="first-vid" className="mini-video-player-blank" onMouseLeave={this.handleOffHover} src={"https://ak4.picdn.net/shutterstock/videos/1014118994/preview/stock-footage-an-ancient-wooden-tablet-filled-with-carved-runic-signs-d-panning-from-top-left-to-bottom-right.webm"}></video>
+            <div className="img-link-vid-container-hidden" onMouseLeave={this.handleOffHover}>
+              <video muted autoPlay loop width="100" id="first-vid" className="mini-video-player" onMouseLeave={this.handleOffHover} src={"https://ak4.picdn.net/shutterstock/videos/1014118994/preview/stock-footage-an-ancient-wooden-tablet-filled-with-carved-runic-signs-d-panning-from-top-left-to-bottom-right.webm"}></video>
+              <div id="img-link-text" className="img-link-text-container">
+                <Link to="#"><i class="far fa-play-circle" onClick={() => this.props.history.push(`/watch/${movie.id}`)}></i></Link>
+                <div className="img-link-info-container">
+                  <div>
+                    <h1>Movie title</h1>
+                    <h2>MPAA, length</h2>
+                    <p>Genre</p>
+                  </div>
+                  <button><i class="fas fa-plus"></i></button>
+                </div>
+              </div>
+            </div>
           </Link>
           <Link to="#" className="img-link-1">
             <img src={"https://assets.justinmind.com/wp-content/uploads/2018/11/Lorem-Ipsum-alternatives.png"} alt="Lorem Ipsum" className="row-1-col-1" onMouseEnter={this.handleOnHover} onMouseLeave={this.clear} />
-            <video muted autoPlay loop width="100" id="first-vid" className="mini-video-player-blank" onMouseLeave={this.handleOffHover} src={"https://ak4.picdn.net/shutterstock/videos/1014118994/preview/stock-footage-an-ancient-wooden-tablet-filled-with-carved-runic-signs-d-panning-from-top-left-to-bottom-right.webm"}></video>
+            <div className="img-link-vid-container-hidden" onMouseLeave={this.handleOffHover}>
+              <video muted autoPlay loop width="100" id="first-vid" className="mini-video-player" onMouseLeave={this.handleOffHover} src={"https://ak4.picdn.net/shutterstock/videos/1014118994/preview/stock-footage-an-ancient-wooden-tablet-filled-with-carved-runic-signs-d-panning-from-top-left-to-bottom-right.webm"}></video>
+              <div id="img-link-text" className="img-link-text-container">
+                <Link to="#"><i class="far fa-play-circle" onClick={() => this.props.history.push(`/watch/${movie.id}`)}></i></Link>
+                <div className="img-link-info-container">
+                  <div>
+                    <h1>Movie title</h1>
+                    <h2>MPAA, length</h2>
+                    <p>Genre</p>
+                  </div>
+                  <button><i class="fas fa-plus"></i></button>
+                </div>
+              </div>
+            </div>
           </Link>
           <Link to="#" className="img-link-1">
             <img src={"https://assets.justinmind.com/wp-content/uploads/2018/11/Lorem-Ipsum-alternatives.png"} alt="Lorem Ipsum" className="row-1-col-1" onMouseEnter={this.handleOnHover} onMouseLeave={this.clear} />
-            <video muted autoPlay loop width="100" id="first-vid" className="mini-video-player-blank" onMouseLeave={this.handleOffHover} src={"https://ak4.picdn.net/shutterstock/videos/1014118994/preview/stock-footage-an-ancient-wooden-tablet-filled-with-carved-runic-signs-d-panning-from-top-left-to-bottom-right.webm"}></video>
+            <div className="img-link-vid-container-hidden" onMouseLeave={this.handleOffHover}>
+              <video muted autoPlay loop width="100" id="first-vid" className="mini-video-player" onMouseLeave={this.handleOffHover} src={"https://ak4.picdn.net/shutterstock/videos/1014118994/preview/stock-footage-an-ancient-wooden-tablet-filled-with-carved-runic-signs-d-panning-from-top-left-to-bottom-right.webm"}></video>
+              <div id="img-link-text" className="img-link-text-container">
+                <Link to="#"><i class="far fa-play-circle" onClick={() => this.props.history.push(`/watch/${movie.id}`)}></i></Link>
+                <div className="img-link-info-container">
+                  <div>
+                    <h1>Movie title</h1>
+                    <h2>MPAA, length</h2>
+                    <p>Genre</p>
+                  </div>
+                  <button><i class="fas fa-plus"></i></button>
+                </div>
+              </div>
+            </div>
           </Link>
           <Link to="#" className="img-link-1">
             <img src={"https://assets.justinmind.com/wp-content/uploads/2018/11/Lorem-Ipsum-alternatives.png"} alt="Lorem Ipsum" className="row-1-col-1" onMouseEnter={this.handleOnHover} onMouseLeave={this.clear} />
-            <video muted autoPlay loop width="100" id="first-vid" className="mini-video-player-blank" onMouseLeave={this.handleOffHover} src={"https://ak4.picdn.net/shutterstock/videos/1014118994/preview/stock-footage-an-ancient-wooden-tablet-filled-with-carved-runic-signs-d-panning-from-top-left-to-bottom-right.webm"}></video>
+            <div className="img-link-vid-container-hidden" onMouseLeave={this.handleOffHover}>
+              <video muted autoPlay loop width="100" id="first-vid" className="mini-video-player" onMouseLeave={this.handleOffHover} src={"https://ak4.picdn.net/shutterstock/videos/1014118994/preview/stock-footage-an-ancient-wooden-tablet-filled-with-carved-runic-signs-d-panning-from-top-left-to-bottom-right.webm"}></video>
+              <div id="img-link-text" className="img-link-text-container">
+                <Link to="#"><i class="far fa-play-circle" onClick={() => this.props.history.push(`/watch/${movie.id}`)}></i></Link>
+                <div className="img-link-info-container">
+                  <div>
+                    <h1>Movie title</h1>
+                    <h2>MPAA, length</h2>
+                    <p>Genre</p>
+                  </div>
+                  <button><i class="fas fa-plus"></i></button>
+                </div>
+              </div>
+            </div>
           </Link>
           <Link to="#" className="img-link-1">
             <img src={"https://assets.justinmind.com/wp-content/uploads/2018/11/Lorem-Ipsum-alternatives.png"} alt="Lorem Ipsum" className="row-1-col-1" onMouseEnter={this.handleOnHover} onMouseLeave={this.clear} />
-            <video muted autoPlay loop width="100" id="first-vid" className="mini-video-player-blank" onMouseLeave={this.handleOffHover} src={"https://ak4.picdn.net/shutterstock/videos/1014118994/preview/stock-footage-an-ancient-wooden-tablet-filled-with-carved-runic-signs-d-panning-from-top-left-to-bottom-right.webm"}></video>
+            <div className="img-link-vid-container-hidden" onMouseLeave={this.handleOffHover}>
+              <video muted autoPlay loop width="100" id="first-vid" className="mini-video-player" onMouseLeave={this.handleOffHover} src={"https://ak4.picdn.net/shutterstock/videos/1014118994/preview/stock-footage-an-ancient-wooden-tablet-filled-with-carved-runic-signs-d-panning-from-top-left-to-bottom-right.webm"}></video>
+              <div id="img-link-text" className="img-link-text-container">
+                <Link to="#"><i class="far fa-play-circle" onClick={() => this.props.history.push(`/watch/${movie.id}`)}></i></Link>
+                <div className="img-link-info-container">
+                  <div>
+                    <h1>Movie title</h1>
+                    <h2>MPAA, length</h2>
+                    <p>Genre</p>
+                  </div>
+                  <button><i class="fas fa-plus"></i></button>
+                </div>
+              </div>
+            </div>
           </Link>
         </div>
       </div>

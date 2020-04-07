@@ -140,11 +140,15 @@ html {
   color: white;
   z-index: 1;
   position: absolute;
-  left: 3%;
-  width: 94%;
-  top: 55px;
+  width: 100%;
+  top: 0;
+  height: 100%;
   cursor: auto;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-sizing: border-box;
+  padding: 8px;
 }
 
 .img-link-text-container-hidden {
@@ -212,4 +216,8 @@ html {
   cursor: auto;
   left: -23%;
   top: -14%;
+}
+
+.img-link-vid-container-hidden {
+  display: none;
 }
