@@ -5,6 +5,7 @@ html {
 .structure-container {
   margin-top: 63px;
   background-color: #101010;
+  min-height: calc(100vh - 63px);
 }
 
 .structure-container {
