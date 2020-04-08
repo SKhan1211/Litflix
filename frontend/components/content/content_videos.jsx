@@ -36,6 +36,8 @@ class ContentVideos extends React.Component {
         event.target.parentElement.className = "img-link-vid-container-hidden";
       } else if (event.target.parentElement.parentElement.className === "img-link-info-container") { 
         event.target.parentElement.parentElement.parentElement.parentElement.className = "img-link-vid-container-hidden"
+      } else if (event.target.className === "far fa-play-circle") {
+        event.target.parentElement.parentElement.parentElement.className = "img-link-vid-container-hidden"
       } else {
         event.target.parentElement.parentElement.className = "img-link-vid-container-hidden";
       }
@@ -47,6 +49,11 @@ class ContentVideos extends React.Component {
     if (event.target.parentElement.children[1].className !== 'img-link-vid-container') {
       this.setState({ isHovered: false})
     }
+  }
+
+  renderCheckOrPlus() {
+    if (store.getState().session.listItems.includes(movie.id)) return <i class="fas fa-check"></i>
+    else return <i class="fas fa-plus"></i>
   }
 
   render() {
@@ -68,7 +75,7 @@ class ContentVideos extends React.Component {
                         <h2>{movie.rating}, {movie.length}</h2>
                         <p>{movie.genre}</p>
                       </div>
-                      <button><i class="fas fa-plus"></i></button>
+                      <button>{this.renderCheckOrPlus()}</button>
                     </div>
                   </div>
                 </div>
