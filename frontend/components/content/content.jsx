@@ -65,27 +65,27 @@ class Content extends React.Component {
       <div className="structure-container">
         {this.props.path === "browse" ? 
           <div className="content-container">
-            <ContentVideos title={"Action"} movies={this.state.movieSet1} title={"Action"} />
-            <ContentVideos title={"Adventure"} movies={this.state.movieSet2} title={"Adventure"} />
-            <ContentVideos title={"Comedy"} movies={this.state.movieSet3} title={"Comedy"} />
-            <ContentVideos title={"Drama"} movies={this.state.movieSet4} title={"Drama"} />
-            <ContentVideos title={"Horror"} movies={this.state.movieSet5} title={"Horror"} />
-            <ContentVideos title={"Sci-Fi"} movies={this.state.movieSet6} title={"Sci-Fi"} />
-            <ContentVideos title={"Romance"} movies={this.state.movieSet7} title={"Romance"} />
+            <ContentVideos title={"Action"} movies={this.state.movieSet1} title={"Action"} createListItem={this.props.createListItem} deleteListItem={this.props.deleteListItem} />
+            <ContentVideos title={"Adventure"} movies={this.state.movieSet2} title={"Adventure"} createListItem={this.props.createListItem} deleteListItem={this.props.deleteListItem} />
+            <ContentVideos title={"Comedy"} movies={this.state.movieSet3} title={"Comedy"} createListItem={this.props.createListItem} deleteListItem={this.props.deleteListItem} />
+            <ContentVideos title={"Drama"} movies={this.state.movieSet4} title={"Drama"} createListItem={this.props.createListItem} deleteListItem={this.props.deleteListItem} />
+            <ContentVideos title={"Horror"} movies={this.state.movieSet5} title={"Horror"}  createListItem={this.props.createListItem} deleteListItem={this.props.deleteListItem} />
+            <ContentVideos title={"Sci-Fi"} movies={this.state.movieSet6} title={"Sci-Fi"}  createListItem={this.props.createListItem} deleteListItem={this.props.deleteListItem} />
+            <ContentVideos title={"Romance"} movies={this.state.movieSet7} title={"Romance"}  createListItem={this.props.createListItem} deleteListItem={this.props.deleteListItem} />
           </div>
         : this.props.path === "movies" ? 
           <div className="content-container">
-            <ContentVideos title={"Newer Releases"} movies={this.state.movieSet3.slice(0, 3).concat(this.state.movieSet6.slice(0, 3))} />
-            <ContentVideos title={"Trending Now"} movies={this.state.movieSet2.slice(0, 3).concat(this.state.movieSet5.slice(0, 2))}  />
-            <ContentVideos title={"Popular on Litflix"} movies={this.state.movieSet1.slice(0, 3).concat(this.state.movieSet4.slice(0, 3))}  />
-            <ContentVideos title={"Continue Watching"} movies={this.state.movieSet5.slice(3, 6).concat(this.state.movieSet7.slice(3, 6))}  />
-            <ContentVideos title={"Top Picks for You"} movies={this.state.movieSet4.slice(3, 5).concat(this.state.movieSet1.slice(3, 5))} />
+            <ContentVideos title={"Newer Releases"} movies={this.state.movieSet3.slice(0, 3).concat(this.state.movieSet6.slice(0, 3))} createListItem={this.props.createListItem} deleteListItem={this.props.deleteListItem} />
+            <ContentVideos title={"Trending Now"} movies={this.state.movieSet2.slice(0, 3).concat(this.state.movieSet5.slice(0, 2))}  createListItem={this.props.createListItem} deleteListItem={this.props.deleteListItem} />
+            <ContentVideos title={"Popular on Litflix"} movies={this.state.movieSet1.slice(0, 3).concat(this.state.movieSet4.slice(0, 3))}  createListItem={this.props.createListItem} deleteListItem={this.props.deleteListItem} />
+            <ContentVideos title={"Continue Watching"} movies={this.state.movieSet5.slice(3, 6).concat(this.state.movieSet7.slice(3, 6))}  createListItem={this.props.createListItem} deleteListItem={this.props.deleteListItem} />
+            <ContentVideos title={"Top Picks for You"} movies={this.state.movieSet4.slice(3, 5).concat(this.state.movieSet1.slice(3, 5))} createListItem={this.props.createListItem} deleteListItem={this.props.deleteListItem} />
           </div>
         :
           <div className="content-container">
-            <ContentVideos title={"Latest Releases"} movies={this.state.movieSet4.slice(0, 3).concat(this.state.movieSet2.slice(0, 3))} />
-            <ContentVideos title={""} movies={this.state.movieSet7.slice(0, 3).concat(this.state.movieSet1.slice(0, 3))} />
-            <ContentVideos title={""} movies={this.state.movieSet2.slice(0, 3).concat(this.state.movieSet5.slice(0, 3))} />
+            <ContentVideos title={"Latest Releases"} movies={this.state.movieSet4.slice(0, 3).concat(this.state.movieSet2.slice(0, 3))} createListItem={this.props.createListItem} deleteListItem={this.props.deleteListItem} />
+            <ContentVideos title={""} movies={this.state.movieSet7.slice(0, 3).concat(this.state.movieSet1.slice(0, 3))} createListItem={this.props.createListItem} deleteListItem={this.props.deleteListItem} />
+            <ContentVideos title={""} movies={this.state.movieSet2.slice(0, 3).concat(this.state.movieSet5.slice(0, 3))} createListItem={this.props.createListItem} deleteListItem={this.props.deleteListItem} />
           </div>
         }
       </div>

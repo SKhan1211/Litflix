@@ -183,6 +183,7 @@ html {
   color: white;
   font-size: 0.8vw;
   cursor: pointer;
+  outline: none;
 }
 
 .img-link-info-container > button:hover {
@@ -221,4 +222,12 @@ html {
 
 .img-link-vid-container-hidden {
   display: none;
+}
+
+.fas.fa-plus {
+  padding: 0.4vw;
+}
+
+.fas.fa-check {
+  padding: 0.4vw;
 }

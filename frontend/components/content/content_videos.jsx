@@ -7,12 +7,14 @@ class ContentVideos extends React.Component {
     super(props);
     this.state = {
       isHovered: false,
-      currentMovie: {}
+      currentMovie: {},
+      currentUser: store.getState().session.id
     };
 
     this.handleOnHover = this.handleOnHover.bind(this);
     this.handleOffHover = this.handleOffHover.bind(this);
     this.clear = this.clear.bind(this);
+    this.handleListButtonClick = this.handleListButtonClick.bind(this);
   }
 
   handleOnHover(event) {
@@ -52,11 +54,22 @@ class ContentVideos extends React.Component {
   }
 
   renderCheckOrPlus() {
-    if (store.getState().session.listItems.includes(movie.id)) return <i className="fas fa-check"></i>
-    else return <i className="fas fa-plus"></i>
+    if (store.getState().session.listItems.includes(movie.id)) return <i className="fas fa-check" onClick={() => this.handleListButtonClick(event, this.state.currentUser, movie.id)}></i>
+    else return <i className="fas fa-plus" onClick={() => this.handleListButtonClick(event, this.state.currentUser, movie.id)}></i>
   }
 
-  render() {
+  handleListButtonClick(event, userId, movieId) {
+    if (event.target.className === "fas fa-plus") {
+      // this.props.createListItem(userId, movieId)
+      event.currentTarget.className === "fas fa-check"
+    } else if (event.target.className === "fas fa-check") {
+      let listItemId = store.getState().listItems[0].filter(el => el.movie_id === movieId)[0].id;
+      // this.props.deleteListItem(listItemId);
+      event.target.className === "fas fa-plus"
+    }
+  }
+
+  render() {  
     return (
       <div className="content-row-container">
         <h1>{this.props.title}</h1>
@@ -95,7 +108,7 @@ class ContentVideos extends React.Component {
                     <h2>MPAA, length</h2>
                     <p>Genre</p>
                   </div>
-                  <button><i className="fas fa-plus"></i></button>
+                  <button><i className="fas fa-plus" onClick={() => this.handleListButtonClick(event, this.state.currentUser, 9)}></i></button>
                 </div>
               </div>
             </div>

@@ -19,7 +19,7 @@ export const createListItem = (userId, movieId) => dispatch => (
   ))
 );
 
-export const deleteListItem = listItemid => (
+export const deleteListItem = listItemId => (
   APIUtil.deleteListItem(listItemId).then(listItem => (
     dispatch(removeListItem(listItem))
   ))

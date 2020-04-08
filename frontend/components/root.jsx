@@ -13,7 +13,6 @@ import App from './App';
 
 const Root = ({ store }) => {
   window.store = store
-  console.log(store.getState())
   return (<Provider store={store}>
     <HashRouter>
       <App currentUser={store.getState().session.id} />
