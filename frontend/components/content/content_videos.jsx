@@ -60,12 +60,12 @@ class ContentVideos extends React.Component {
 
   handleListButtonClick(event, userId, movieId) {
     if (event.target.className === "fas fa-plus") {
-      // this.props.createListItem(userId, movieId)
-      event.currentTarget.className === "fas fa-check"
+      this.props.createListItem(userId, movieId)
+      event.target.className = "fas fa-check"
     } else if (event.target.className === "fas fa-check") {
       let listItemId = store.getState().listItems[0].filter(el => el.movie_id === movieId)[0].id;
-      // this.props.deleteListItem(listItemId);
-      event.target.className === "fas fa-plus"
+      this.props.deleteListItem(listItemId);
+      event.target.className = "fas fa-plus"
     }
   }
 
