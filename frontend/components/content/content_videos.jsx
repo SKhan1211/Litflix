@@ -52,8 +52,8 @@ class ContentVideos extends React.Component {
   }
 
   renderCheckOrPlus() {
-    if (store.getState().session.listItems.includes(movie.id)) return <i class="fas fa-check"></i>
-    else return <i class="fas fa-plus"></i>
+    if (store.getState().session.listItems.includes(movie.id)) return <i className="fas fa-check"></i>
+    else return <i className="fas fa-plus"></i>
   }
 
   render() {
@@ -68,7 +68,7 @@ class ContentVideos extends React.Component {
                 <div className="img-link-vid-container-hidden" onMouseLeave={this.handleOffHover}>
                   <video muted autoPlay loop width="100" id="first-vid" className="mini-video-player" onMouseLeave={this.handleOffHover} src={movie.videoURL}></video>
                   <div id="img-link-text" className="img-link-text-container">
-                    <div><i class="far fa-play-circle" onClick={() => this.props.history.push(`/watch/${movie.id}`)}></i></div>
+                    <div><i className="far fa-play-circle" onClick={() => this.props.history.push(`/watch/${movie.id}`)}></i></div>
                     <div className="img-link-info-container">
                       <div>
                         <h1>{movie.title}</h1>
@@ -88,14 +88,14 @@ class ContentVideos extends React.Component {
             <div className="img-link-vid-container-hidden" onMouseLeave={this.handleOffHover}>
               <video muted autoPlay loop width="100" id="first-vid" className="mini-video-player" onMouseLeave={this.handleOffHover} src={"https://ak4.picdn.net/shutterstock/videos/1014118994/preview/stock-footage-an-ancient-wooden-tablet-filled-with-carved-runic-signs-d-panning-from-top-left-to-bottom-right.webm"}></video>
               <div id="img-link-text" className="img-link-text-container">
-                <div><i class="far fa-play-circle" onClick={() => this.props.history.push(`/watch/${movie.id}`)}></i></div>
+                <div><i className="far fa-play-circle" onClick={() => this.props.history.push(`/watch/${movie.id}`)}></i></div>
                 <div className="img-link-info-container">
                   <div>
                     <h1>Movie title</h1>
                     <h2>MPAA, length</h2>
                     <p>Genre</p>
                   </div>
-                  <button><i class="fas fa-plus"></i></button>
+                  <button><i className="fas fa-plus"></i></button>
                 </div>
               </div>
             </div>
@@ -105,14 +105,14 @@ class ContentVideos extends React.Component {
             <div className="img-link-vid-container-hidden" onMouseLeave={this.handleOffHover}>
               <video muted autoPlay loop width="100" id="first-vid" className="mini-video-player" onMouseLeave={this.handleOffHover} src={"https://ak4.picdn.net/shutterstock/videos/1014118994/preview/stock-footage-an-ancient-wooden-tablet-filled-with-carved-runic-signs-d-panning-from-top-left-to-bottom-right.webm"}></video>
               <div id="img-link-text" className="img-link-text-container">
-                <div><i class="far fa-play-circle" onClick={() => this.props.history.push(`/watch/${movie.id}`)}></i></div>
+                <div><i className="far fa-play-circle" onClick={() => this.props.history.push(`/watch/${movie.id}`)}></i></div>
                 <div className="img-link-info-container">
                   <div>
                     <h1>Movie title</h1>
                     <h2>MPAA, length</h2>
                     <p>Genre</p>
                   </div>
-                  <button><i class="fas fa-plus"></i></button>
+                  <button><i className="fas fa-plus"></i></button>
                 </div>
               </div>
             </div>
@@ -122,14 +122,14 @@ class ContentVideos extends React.Component {
             <div className="img-link-vid-container-hidden" onMouseLeave={this.handleOffHover}>
               <video muted autoPlay loop width="100" id="first-vid" className="mini-video-player" onMouseLeave={this.handleOffHover} src={"https://ak4.picdn.net/shutterstock/videos/1014118994/preview/stock-footage-an-ancient-wooden-tablet-filled-with-carved-runic-signs-d-panning-from-top-left-to-bottom-right.webm"}></video>
               <div id="img-link-text" className="img-link-text-container">
-                <div><i class="far fa-play-circle" onClick={() => this.props.history.push(`/watch/${movie.id}`)}></i></div>
+                <div><i className="far fa-play-circle" onClick={() => this.props.history.push(`/watch/${movie.id}`)}></i></div>
                 <div className="img-link-info-container">
                   <div>
                     <h1>Movie title</h1>
                     <h2>MPAA, length</h2>
                     <p>Genre</p>
                   </div>
-                  <button><i class="fas fa-plus"></i></button>
+                  <button><i className="fas fa-plus"></i></button>
                 </div>
               </div>
             </div>
@@ -139,14 +139,14 @@ class ContentVideos extends React.Component {
             <div className="img-link-vid-container-hidden" onMouseLeave={this.handleOffHover}>
               <video muted autoPlay loop width="100" id="first-vid" className="mini-video-player" onMouseLeave={this.handleOffHover} src={"https://ak4.picdn.net/shutterstock/videos/1014118994/preview/stock-footage-an-ancient-wooden-tablet-filled-with-carved-runic-signs-d-panning-from-top-left-to-bottom-right.webm"}></video>
               <div id="img-link-text" className="img-link-text-container">
-                <div><i class="far fa-play-circle" onClick={() => this.props.history.push(`/watch/${movie.id}`)}></i></div>
+                <div><i className="far fa-play-circle" onClick={() => this.props.history.push(`/watch/${movie.id}`)}></i></div>
                 <div className="img-link-info-container">
                   <div>
                     <h1>Movie title</h1>
                     <h2>MPAA, length</h2>
                     <p>Genre</p>
                   </div>
-                  <button><i class="fas fa-plus"></i></button>
+                  <button><i className="fas fa-plus"></i></button>
                 </div>
               </div>
             </div>
@@ -156,14 +156,14 @@ class ContentVideos extends React.Component {
             <div className="img-link-vid-container-hidden" onMouseLeave={this.handleOffHover}>
               <video muted autoPlay loop width="100" id="first-vid" className="mini-video-player" onMouseLeave={this.handleOffHover} src={"https://ak4.picdn.net/shutterstock/videos/1014118994/preview/stock-footage-an-ancient-wooden-tablet-filled-with-carved-runic-signs-d-panning-from-top-left-to-bottom-right.webm"}></video>
               <div id="img-link-text" className="img-link-text-container">
-                <div><i class="far fa-play-circle" onClick={() => this.props.history.push(`/watch/${movie.id}`)}></i></div>
+                <div><i className="far fa-play-circle" onClick={() => this.props.history.push(`/watch/${movie.id}`)}></i></div>
                 <div className="img-link-info-container">
                   <div>
                     <h1>Movie title</h1>
                     <h2>MPAA, length</h2>
                     <p>Genre</p>
                   </div>
-                  <button><i class="fas fa-plus"></i></button>
+                  <button><i className="fas fa-plus"></i></button>
                 </div>
               </div>
             </div>
@@ -173,14 +173,14 @@ class ContentVideos extends React.Component {
             <div className="img-link-vid-container-hidden" onMouseLeave={this.handleOffHover}>
               <video muted autoPlay loop width="100" id="first-vid" className="mini-video-player" onMouseLeave={this.handleOffHover} src={"https://ak4.picdn.net/shutterstock/videos/1014118994/preview/stock-footage-an-ancient-wooden-tablet-filled-with-carved-runic-signs-d-panning-from-top-left-to-bottom-right.webm"}></video>
               <div id="img-link-text" className="img-link-text-container">
-                <div><i class="far fa-play-circle" onClick={() => this.props.history.push(`/watch/${movie.id}`)}></i></div>
+                <div><i className="far fa-play-circle" onClick={() => this.props.history.push(`/watch/${movie.id}`)}></i></div>
                 <div className="img-link-info-container">
                   <div>
                     <h1>Movie title</h1>
                     <h2>MPAA, length</h2>
                     <p>Genre</p>
                   </div>
-                  <button><i class="fas fa-plus"></i></button>
+                  <button><i className="fas fa-plus"></i></button>
                 </div>
               </div>
             </div>
