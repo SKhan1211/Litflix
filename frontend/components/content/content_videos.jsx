@@ -54,7 +54,7 @@ class ContentVideos extends React.Component {
   }
 
   renderCheckOrPlus(movieId) {
-    if (store.getState().listItems[0].map(el => el.movieId).includes(movie.id)) return <i className="fas fa-check" onClick={() => this.handleListButtonClick(event, this.state.currentUser, movie.id)}></i>
+    if (store.getState().listItems[0].map(el => el.movie_id).includes(movieId)) return <i className="fas fa-check" onClick={() => this.handleListButtonClick(event, this.state.currentUser, movie.id)}></i>
     else return <i className="fas fa-plus" onClick={() => this.handleListButtonClick(event, this.state.currentUser, movie.id)}></i>
   }
 
