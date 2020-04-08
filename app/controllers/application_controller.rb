@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
-  protect_from_forgery with: :null_session
+  # protect_from_forgery with: :null_session
   
-  helper_method :current_user, :signed_in?
+  helper_method :current_user, :signed_in?, :list_items
 
   private
 
@@ -30,4 +30,10 @@ class ApplicationController < ActionController::Base
       render json: { base: ['invalid credentials'] }, status: 401
     end
   end
+
+  def list_items
+    return nil unless session[:session_token]
+    @list_items ||= ListItem.where(user_id: current_user.id)
+  end
+
 end

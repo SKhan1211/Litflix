@@ -1,0 +1,1 @@
+json.array! list_items, :user_id, :movie_id
