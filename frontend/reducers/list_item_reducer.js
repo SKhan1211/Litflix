@@ -5,7 +5,7 @@ const listItemReducer = (state = [], action) => {
     case ADD_LIST_ITEM:
       return [state[0].concat(action.listItem)];
     case REMOVE_LIST_ITEM:
-      return state[0].filter(el => el.id !== action.listItem.id);
+      return [state[0].filter(el => el.id !== action.listItem.id)];
     default:
       return state;
   };

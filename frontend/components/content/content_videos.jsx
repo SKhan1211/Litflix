@@ -54,8 +54,8 @@ class ContentVideos extends React.Component {
   }
 
   renderCheckOrPlus(movieId) {
-    if (store.getState().listItems[0].map(el => el.movie_id).includes(movieId)) return <i className="fas fa-check" onClick={() => this.handleListButtonClick(event, this.state.currentUser, movie.id)}></i>
-    else return <i className="fas fa-plus" onClick={() => this.handleListButtonClick(event, this.state.currentUser, movie.id)}></i>
+    if (store.getState().listItems[0] && store.getState().listItems[0].map(el => el.movie_id).includes(movieId)) return <i className="fas fa-check" onClick={() => this.handleListButtonClick(event, this.state.currentUser, movieId)}></i>
+    else return <i className="fas fa-plus" onClick={() => this.handleListButtonClick(event, this.state.currentUser, movieId)}></i>
   }
 
   handleListButtonClick(event, userId, movieId) {
@@ -66,6 +66,9 @@ class ContentVideos extends React.Component {
       let listItemId = store.getState().listItems[0].filter(el => el.movie_id === movieId)[0].id;
       this.props.deleteListItem(listItemId);
       event.target.className = "fas fa-plus"
+      if (this.props.location.pathname === "/mylist") {
+        window.location.reload();
+      }
     }
   }
 

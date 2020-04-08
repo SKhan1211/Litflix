@@ -2,6 +2,36 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import ContentVideos from './content_videos';
 
+// const testModel1 = {
+//   id: 1, 
+//   title: "John Wick: Chapter 3 - Parabellum", 
+//   description:
+//     "John Wick is on the run after killing a member of the international assassins guild, and with a $14 million price tag on his head, he is the target of hit men and women everywhere.",
+//   year: 2019,
+//   length: "2h 11m",
+//   rating: "R",
+//   starring_actors: "Keanu Reeves, Halle Berry",
+//   genre: "Action",
+//   photoURL: "https://assets.justinmind.com/wp-content/uploads/2018/11/Lorem-Ipsum-alternatives.png",
+//   videoURL: "https://ak4.picdn.net/shutterstock/videos/1014118994/preview/stock-footage-an-ancient-wooden-tablet-filled-with-carved-runic-signs-d-panning-from-top-left-to-bottom-right.webm"
+// }
+
+// const testModel2 = {
+//   id: 2,
+//   title: "Avengers: Endgame",
+//   description:
+//     "After the devastating events of Avengers: Infinity War (2018), the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos actions and restore balance to the universe.",
+//   year: 2019,
+//   length: "3h 1m",
+//   rating: "PG-13",
+//   starring_actors: "Robert Downey Jr., Chris Evans",
+//   genre: "Action",
+//   photoURL: "https://i.picsum.photos/id/880/400/300.jpg",
+//   videoURL: "https://ak4.picdn.net/shutterstock/videos/1013991794/preview/stock-footage-news-paper-rolling-up-the-screen-and-into-focus-with-a-shallow-depth-of-field-and-lorem-ipsum.webm"
+// }
+
+// const testModels = [testModel1, testModel2];
+
 class Content extends React.Component {
   constructor(props) {
     super(props);
@@ -26,7 +56,9 @@ class Content extends React.Component {
         this.props.fetchSingleMovie(el.media_id).then(movie => {
           this.setState({ myList: this.state.myList.concat([movie]) })
         });
-        // this.setState({ myList: this.state.myList.concat([store.getState().listItems[0][0].movie_id]) })
+
+        //           this.setState({ myList: this.state.myList.concat([testModel2]) })
+
       });
     } else {
       this.props.fetchAllMovies().then(movies => this.divideByGenre(movies))
