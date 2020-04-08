@@ -23,13 +23,13 @@ class Content extends React.Component {
   componentDidMount() {
     if (this.props.path === "mylist") {
       store.getState().listItems[0].forEach(el => {
-        // this.props.fetchSingleMovie(el.media_id).then(movie => {
-          // this.setState({ myList: this.state.myList.concat([movie]) })
-        // });
-        this.setState({ myList: this.state.myList.concat([store.getState().listItems[0][0].movie_id]) })
+        this.props.fetchSingleMovie(el.media_id).then(movie => {
+          this.setState({ myList: this.state.myList.concat([movie]) })
+        });
+        // this.setState({ myList: this.state.myList.concat([store.getState().listItems[0][0].movie_id]) })
       });
     } else {
-      // this.props.fetchAllMovies().then(movies => this.divideByGenre(movies))
+      this.props.fetchAllMovies().then(movies => this.divideByGenre(movies))
     }
   }
 

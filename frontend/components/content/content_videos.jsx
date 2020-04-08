@@ -74,7 +74,7 @@ class ContentVideos extends React.Component {
       <div className="content-row-container">
         <h1>{this.props.title}</h1>
         <div className="video-container">
-          {/* {
+          {
             this.props.movies.map((movie, idx) => (
               <div className="img-link-1">
                 <img src={movie.photoURL} alt="Lorem Ipsum" className="row-1-col-1" onMouseEnter={this.handleOnHover} onMouseLeave={this.clear} onClick={() => this.props.history.push(`/watch/${movie.id}`)} />
@@ -94,9 +94,9 @@ class ContentVideos extends React.Component {
                 </div>
               </div>
             ))
-          } */}
+          }
 
-          <div className="img-link-1">
+          {/* <div className="img-link-1">
             <img src={"https://assets.justinmind.com/wp-content/uploads/2018/11/Lorem-Ipsum-alternatives.png"} alt="Lorem Ipsum" className="row-1-col-1" onMouseEnter={this.handleOnHover} onMouseLeave={this.clear} />
             <div className="img-link-vid-container-hidden" onMouseLeave={this.handleOffHover}>
               <video muted autoPlay loop width="100" id="first-vid" className="mini-video-player" onMouseLeave={this.handleOffHover} src={"https://ak4.picdn.net/shutterstock/videos/1014118994/preview/stock-footage-an-ancient-wooden-tablet-filled-with-carved-runic-signs-d-panning-from-top-left-to-bottom-right.webm"}></video>
@@ -197,7 +197,8 @@ class ContentVideos extends React.Component {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
+
         </div>
       </div>
     )
