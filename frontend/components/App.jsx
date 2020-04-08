@@ -8,6 +8,7 @@ import WatchContainer from './watch/watch_container';
 import Browse from './browse/browse';
 import Movies from './movies/movies';
 import Latest from './latest/latest';
+import MyList from './mylist/mylist';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 const App = () => (
@@ -19,6 +20,7 @@ const App = () => (
       <ProtectedRoute exact path="/watch/:mediaId" component={WatchContainer} />
       <ProtectedRoute exact path="/movies" component={Movies} />
       <ProtectedRoute exact path="/latest" component={Latest} />
+      <ProtectedRoute exact path="/mylist" component={MyList} />
       <AuthRoute path="/" component={SplashContainer}/>
     </Switch>
   </div>
