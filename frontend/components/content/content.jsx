@@ -53,7 +53,7 @@ class Content extends React.Component {
   componentDidMount() {
     if (this.props.path === "mylist") {
       store.getState().listItems[0].forEach(el => {
-        this.props.fetchSingleMovie(el.media_id).then(movie => {
+        this.props.fetchSingleMovie(el.movie_id).then(movie => {
           this.setState({ myList: this.state.myList.concat([movie]) })
         });
 
