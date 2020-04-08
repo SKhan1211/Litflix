@@ -53,8 +53,8 @@ class ContentVideos extends React.Component {
     }
   }
 
-  renderCheckOrPlus() {
-    if (store.getState().session.listItems.includes(movie.id)) return <i className="fas fa-check" onClick={() => this.handleListButtonClick(event, this.state.currentUser, movie.id)}></i>
+  renderCheckOrPlus(movieId) {
+    if (store.getState().listItems[0].map(el => el.movieId).includes(movie.id)) return <i className="fas fa-check" onClick={() => this.handleListButtonClick(event, this.state.currentUser, movie.id)}></i>
     else return <i className="fas fa-plus" onClick={() => this.handleListButtonClick(event, this.state.currentUser, movie.id)}></i>
   }
 
@@ -88,7 +88,7 @@ class ContentVideos extends React.Component {
                         <h2>{movie.rating}, {movie.length}</h2>
                         <p>{movie.genre}</p>
                       </div>
-                      <button>{this.renderCheckOrPlus()}</button>
+                      <button>{this.renderCheckOrPlus(movie.id)}</button>
                     </div>
                   </div>
                 </div>
