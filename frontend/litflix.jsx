@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let store;
   if (window.currentUser) {
     const preloadedState = {
-      session: { id: window.currentUser.id },
+      session: { id: window.currentUser.id, listItems: window.listItems.map(obj => obj["movie_id"]) },
       entities: {
         users: { [window.currentUser.id]: window.currentUser }
       }

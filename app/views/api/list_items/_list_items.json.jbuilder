@@ -1,1 +1,1 @@
-json.array! list_items, :user_id, :movie_id
+json.array! list_items, :movie_id
