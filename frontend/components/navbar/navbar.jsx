@@ -66,7 +66,7 @@ class NavBar extends React.Component {
 
 
   componentDidMount() {
-    // this.fetchSomeMovies();
+    this.fetchSomeMovies();
   }
 
   handleSearchInput() {

@@ -54,20 +54,20 @@ class Content extends React.Component {
   componentDidMount() {
     if (this.props.path === "mylist") {
       store.getState().listItems[0].forEach(el => {
-        // this.props.fetchSingleMovie(el.movie_id).then(movie => {
-        //   console.log(movie);
-        //   this.setState({ myList: this.state.myList.concat([movie]) })
-        // });
+        this.props.fetchSingleMovie(el.movie_id).then(movie => {
+          console.log(movie);
+          this.setState({ myList: this.state.myList.concat([movie]) })
+        });
 
         // this.setState({ myList: this.state.myList.concat([testModel2]) })
 
       });
     } else if (this.props.path === 'search') {
-      // this.props.fetchSearchedMovies(this.props.history.location.search.slice(13)).then(movies => {
-      //   this.setState({ searches: movies.searchQueryMovies })
-      // })
+      this.props.fetchSearchedMovies(this.props.history.location.search.slice(13)).then(movies => {
+        this.setState({ searches: movies.searchQueryMovies })
+      })
     } else {
-      // this.props.fetchAllMovies().then(movies => this.divideByGenre(movies))
+      this.props.fetchAllMovies().then(movies => this.divideByGenre(movies))
     }
   }
 
