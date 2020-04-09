@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import NavbarListItems from './navbar_list_items';
 
+
 class NavBar extends React.Component {
   constructor(props) {
     super(props);
@@ -71,6 +72,7 @@ class NavBar extends React.Component {
   handleSearchInput() {
     if (this.state.searchInputShown 
           && event.target.className !== "navbar-search-input-shown" 
+          && document.getElementsByClassName("navbar-search-input-shown").length > 1
         ) {
       document.getElementsByClassName("navbar-search-input-shown")[0].className = "navbar-search-input-hidden";
       let container = document.getElementsByClassName("navbar-right")[0]
@@ -134,6 +136,8 @@ class NavBar extends React.Component {
   handleSearchEnter() {
     if (event.key === "Enter") {
       this.state.searchQuery.length > 1 ? this.props.history.push(`/search?search_term=${this.state.searchQuery}`) : this.props.history.push("/latest");
+    } else if (event.key === "Backspace" && this.props.location.pathname === "/search" && this.state.searchQuery.length === 0) {
+      this.props.history.push("/latest");
     }
   }
 
@@ -154,7 +158,7 @@ class NavBar extends React.Component {
             {/* <img src={window.searchIcon} height="20" width="20" /> */}
             <div className="navbar-right-search-container">
               <i className="fas fa-search" onClick={this.handleSearchInput}></i>
-              <input className="navbar-search-input-hidden" type="text" placeholder="Titles..." onChange={this.handleSearch} value={this.searchQuery} onKeyPress={this.handleSearchEnter}></input>
+              <input className="navbar-search-input-hidden" type="text" placeholder="Titles..." onChange={this.handleSearch} value={this.searchQuery} onKeyDown={this.handleSearchEnter}></input>
             </div>
             {/* <Link className="navbar-right-link" to={"/browse"}>DVD</Link> */}
             {/* <img src={window.whiteBellIcon} height="35" width="35" onMouseEnter={this.handleOpen} onMouseLeave={this.handleClose}/> */}
