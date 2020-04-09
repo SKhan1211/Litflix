@@ -51,7 +51,7 @@ class Content extends React.Component {
     this.renderMyList = this.renderMyList.bind(this);
   }
 
-  componentDidMount() {
+  componentWillMount() {
     if (this.props.path === "mylist") {
       store.getState().listItems[0].forEach(el => {
         this.props.fetchSingleMovie(el.movie_id).then(movie => {

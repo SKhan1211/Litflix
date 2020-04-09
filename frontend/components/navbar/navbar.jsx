@@ -65,7 +65,7 @@ class NavBar extends React.Component {
   }
 
 
-  componentDidMount() {
+  componentWillMount() {
     this.fetchSomeMovies();
   }
 
