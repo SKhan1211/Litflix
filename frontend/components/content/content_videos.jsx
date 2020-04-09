@@ -64,11 +64,12 @@ class ContentVideos extends React.Component {
       event.target.className = "fas fa-check"
     } else if (event.target.className === "fas fa-check") {
       let listItemId = store.getState().listItems[0].filter(el => el.movie_id === movieId)[0].id;
-      this.props.deleteListItem(listItemId);
-      event.target.className = "fas fa-plus"
-      if (this.props.location.pathname === "/mylist") {
-        window.location.reload();
-      }
+      this.props.deleteListItem(listItemId).then(() => {
+        event.target.className = "fas fa-plus"
+        if (this.props.location.pathname === "/mylist") {
+          window.location.reload();
+        }
+      });
     }
   }
 
@@ -79,7 +80,7 @@ class ContentVideos extends React.Component {
         <div className="video-container">
           {
             this.props.movies.map((movie, idx) => (
-              <div className="img-link-1">
+              <div className="img-link-1" key={idx}>
                 <img src={movie.photoURL} alt="Lorem Ipsum" className="row-1-col-1" onMouseEnter={this.handleOnHover} onMouseLeave={this.clear} onClick={() => this.props.history.push(`/watch/${movie.id}`)} />
                 <div className="img-link-vid-container-hidden" onMouseLeave={this.handleOffHover}>
                   <video muted autoPlay loop width="100" id="first-vid" className="mini-video-player" onMouseLeave={this.handleOffHover} src={movie.videoURL}></video>
