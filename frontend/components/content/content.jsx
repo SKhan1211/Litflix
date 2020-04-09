@@ -44,7 +44,7 @@ class Content extends React.Component {
       movieSet6: [],
       movieSet7: [],
       myList: [],
-      searches: testModels
+      searches: []
     };
 
     this.divideByGenre = this.divideByGenre.bind(this);
