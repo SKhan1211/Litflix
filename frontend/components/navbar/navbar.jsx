@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import NavbarListItems from './navbar_list_items';
 
 class NavBar extends React.Component {
@@ -9,7 +9,8 @@ class NavBar extends React.Component {
       isOpen: false,
       mouseOverMenu: false,
       fetchedMovies: [],
-      searchInputShown: false
+      searchInputShown: false,
+      searchQuery: ""
     };
 
     this.handleOpen = this.handleOpen.bind(this);
@@ -19,6 +20,8 @@ class NavBar extends React.Component {
     this.undisplayNotification = this.undisplayNotification.bind(this);
     this.fetchSomeMovies = this.fetchSomeMovies.bind(this);
     this.handleSearchInput = this.handleSearchInput.bind(this);
+    this.handleSearch = this.handleSearch.bind(this);
+    this.handleSearchEnter = this.handleSearchEnter.bind(this);
   };
 
   handleOpen() {
@@ -124,6 +127,16 @@ class NavBar extends React.Component {
     }
   }
 
+  handleSearch() {
+    this.setState({ searchQuery: event.target.value })
+  }
+
+  handleSearchEnter() {
+    if (event.key === "Enter") {
+      this.state.searchQuery.length > 1 ? this.props.history.push(`/search?search_term=${this.state.searchQuery}`) : this.props.history.push("/latest");
+    }
+  }
+
   render() {
     return (
       <div className="navbar-component">
@@ -141,7 +154,7 @@ class NavBar extends React.Component {
             {/* <img src={window.searchIcon} height="20" width="20" /> */}
             <div className="navbar-right-search-container">
               <i className="fas fa-search" onClick={this.handleSearchInput}></i>
-              <input className="navbar-search-input-hidden" type="text" placeholder="Titles..."></input>
+              <input className="navbar-search-input-hidden" type="text" placeholder="Titles..." onChange={this.handleSearch} value={this.searchQuery} onKeyPress={this.handleSearchEnter}></input>
             </div>
             {/* <Link className="navbar-right-link" to={"/browse"}>DVD</Link> */}
             {/* <img src={window.whiteBellIcon} height="35" width="35" onMouseEnter={this.handleOpen} onMouseLeave={this.handleClose}/> */}
@@ -169,4 +182,4 @@ class NavBar extends React.Component {
   };
 };
 
-export default NavBar;
+export default withRouter(NavBar);
