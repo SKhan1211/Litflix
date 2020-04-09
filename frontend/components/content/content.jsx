@@ -56,7 +56,7 @@ class Content extends React.Component {
       store.getState().listItems[0].forEach(el => {
         this.props.fetchSingleMovie(el.movie_id).then(movie => {
           console.log(movie);
-          this.setState({ myList: this.state.myList.concat([movie]) })
+          this.setState({ myList: this.state.myList.concat([movie.movie]) })
         });
 
         // this.setState({ myList: this.state.myList.concat([testModel2]) })
