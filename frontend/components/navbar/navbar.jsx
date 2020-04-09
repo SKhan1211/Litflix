@@ -66,7 +66,7 @@ class NavBar extends React.Component {
 
 
   componentDidMount() {
-    this.fetchSomeMovies();
+    // this.fetchSomeMovies();
   }
 
   handleSearchInput() {
@@ -135,7 +135,7 @@ class NavBar extends React.Component {
 
   handleSearchEnter() {
     if (event.key === "Enter") {
-      this.state.searchQuery.length > 1 ? this.props.history.push(`/search?search_term=${this.state.searchQuery}`) : this.props.history.push("/latest");
+      this.state.searchQuery.length > 0 ? this.props.history.push(`/search?search_term=${this.state.searchQuery}`) : this.props.history.push("/latest");
     } else if (event.key === "Backspace" && this.props.location.pathname === "/search" && this.state.searchQuery.length === 0) {
       this.props.history.push("/latest");
     }
